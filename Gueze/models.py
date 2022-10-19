@@ -65,6 +65,7 @@ class beer(models.Model):
     abv = models.FloatField()
     ibu = models.FloatField()
     logo = models.CharField(max_length=5000)
+    prix = models.FloatField()
 
     #Foreignkey
 
