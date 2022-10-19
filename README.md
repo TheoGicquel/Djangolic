@@ -39,17 +39,17 @@ yarnkpg add @fortawesome/fontawesome-free
 
 ## Effectuer les migrations 
 ```
-./manage.py makemigrations task_and_user
+./manage.py makemigrations Gueze
 ```
 ```
-./manage.py sqlmigrate task_and_user 0001
+./manage.py sqlmigrate Gueze 0001
 ```
 ```
 ./manage.py migrate
 ```
 
 ## Lancer l'application
-Se dirigier dans la source du projet : /djangoProject2/
+Se dirigier dans la source du projet : /Djangolic/
 Taper la commande :
 ```
 ./manage.py runserver
