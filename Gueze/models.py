@@ -66,6 +66,8 @@ class beer(models.Model):
     ibu = models.FloatField()
     logo = models.CharField(max_length=5000)
 
+    #Foreignkey
+
     style = models.ManyToManyField(style)
     brasserie = models.ForeignKey(brewery, on_delete=models.CASCADE)
     srm = models.ForeignKey(srm, on_delete=models.CASCADE)
