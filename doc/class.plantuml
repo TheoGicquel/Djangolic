@@ -1,0 +1,67 @@
+@startuml name
+
+class Beer
+{
+* id : Int
+* name : Text
+* description : Text
+* abv : Float
+* ibu : Float
+* image : Text
+* 
+* updated_at : DateTime
+--
+* srm_Id : Int
+* brewery_Id : Int
+* style_Id : Int
+* type_Id : Int
+* glass_Id : Int
+}
+
+class Glass
+{
+* id : Int
+* name : Text
+* description : Text
+* asset_link : Text
+}
+
+class Brewery
+{
+* id : Int
+* name : Text
+* description : Text
+* website : Text
+* 
+* updated_at : DateTime
+* location_Id : Int
+}
+
+class Location
+{
+* id : Int
+* name : Text
+* flag
+}
+
+class Srm
+{
+* id : Int
+* name : Text
+* description : Text
+}
+
+class Style
+{
+* id : Int
+* name : Text
+* description : Text
+}
+
+Brewery -- Location
+Glass -- Beer
+Brewery -- Beer
+Srm -- Beer
+Style -- Beer
+
+@enduml
