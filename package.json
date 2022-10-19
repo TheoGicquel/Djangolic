@@ -1,0 +1,29 @@
+{
+  "name": "djangolic",
+  "version": "1.0.0",
+  "description": "A django beverage crud website",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "venv-unix": "source venv/bin/activate",
+    "venv-win": "venv\\Scripts\\activate",
+    "start": "python manage.py runserver",
+    "dev-tailwind" : "python manage.py tailwind start",
+    "dev-tailwind-build" : "python manage.py tailwind build",
+    "dev-runserver" : "python manage.py runserver",
+    "run-dev" : "npm run dev-tailwind && npm run dev-runserver",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/theogicquel/Djangolic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theogicquel/Djangolic/issues"
+  },
+  "homepage": "https://github.com/theogicquel/Djangolic#readme"
+}
