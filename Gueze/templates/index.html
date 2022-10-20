@@ -1,5 +1,21 @@
-{% extends "base.html" %}
-{% block body %}
-<h1> test</h1>
+{% include 'base.html' %}
+	<body class="bg-gray-50 leading-normal tracking-normal">
+		{% include 'navbar.html' %}
+		<div class="container mx-auto">
+			<section class="flex items-center justify-center h-screen">
+								
+				{% with cardName="Rechercher 🔍" cardText="Rechercher une bière" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
 
-{% endblock %}
+				{% with cardName="Ajouter 🍺" cardText="Ajouter une bière" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+
+				{% with cardName="Supprimer ❌" cardText="Suprimmer une bière" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+				
+			</section>
+		</div>
+	</body>
