@@ -1,10 +1,16 @@
 {% include 'base.html' %}
 	<body class="bg-gray-50 leading-normal tracking-normal">
 		{% include 'navbar.html' %}
-		<div class="container mx-auto">
-			<section class="flex items-center justify-center h-screen">
+		
+		
+		
+		<div class="container mx-auto after:animate-waverotate bg-blue-400 after:bg-black after:min-h-full after:absolute">
+			
+			<h1 class="hover:animate-wiggle  mb-4 text-center text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl ">Gueze</h1>
+			<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48">Beer Database	.</p>
+			<section class="flex items-center justify-center ">
 								
-				{% with cardName="Rechercher 🔍" cardText="Rechercher une bière" %}
+				{% with cardName="Rechercher 🔍" cardText="Rechercher une bière" cardUrl="search" %}
 					{% include "card-generic.html"%}
 				{% endwith %}
 
