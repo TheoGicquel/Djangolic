@@ -45,7 +45,24 @@ module.exports = {
         FontFamily: {
             'sans': ['Inter', 'sans-serif']
         },
-        extend: {},
+        extend: {
+            keyframes: {
+                wiggle: {
+                    '0%, 100%': { transform: 'rotate(-3deg)' },
+                    '50%': { transform: 'rotate(3deg)' },
+                },
+                waverotate: {
+                    '0%' :{transform: 'translate(-50%, 0) rotateZ(0deg)'},
+                  '50%': {transform: 'translate(-50%, -2%) rotateZ(180deg)'},
+                   '100%': {transform: 'translate(-50%, 0%) rotateZ(360deg)'},
+                },
+                animation:
+                {
+                wiggle: 'wiggle 1s ease-in-out infinite',
+                waverotate: 'waveRotate 2s ease-in-out infinite',
+                }
+            }
+        },
     },
     plugins: [
         /**
