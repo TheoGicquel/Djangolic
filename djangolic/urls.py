@@ -15,9 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from Gueze import views 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
     path('beers/', include('Gueze.urls')),
+    
+    path('beers/<int:beer_id>/', views.beerview, name="beerview"),
+    path('index', views.index , name='index'),
+    path('', views.index , name='index'),
+    path('search', views.search , name='search'),
+    path('create', views.create , name='create'),
+    path('update', views.update , name='update'),
+    path('about', views.about , name='about'),
+
 ]
