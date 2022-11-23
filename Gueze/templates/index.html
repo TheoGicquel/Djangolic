@@ -1,27 +1,73 @@
 {% include 'base.html' %}
-	<body class="bg-gray-50 leading-normal tracking-normal">
+	<body class="leading-normal tracking-normal">
 		{% include 'navbar.html' %}
 		
-		
-		
-		<div class="container mx-auto after:animate-waverotate bg-blue-400 after:bg-black after:min-h-full after:absolute">
+
+		<section class="bg-gray-50">
+			<div
+			  class="mx-auto max-w-screen-xl px-4 py-8 lg:flex lg:h-fit lg:items-center"
+			>
+			  <div class="mx-auto max-w-xl text-center">
+				<h1 class="text-3xl font-extrabold sm:text-5xl">
+					Looking for beer ?
+				  <strong class="font-extrabold text-amber-700 sm:block">
+					Too many choices.
+				  </strong>
+				</h1>
+		  
+				<p class="mt-4 sm:text-xl sm:leading-relaxed">
+				  With <span class="font-extrabold text-amber-600">Gueze</span> find the right brew for you.
+				</p>
+		  
+				<div class="mt-8 flex flex-wrap justify-center gap-4">
+				  <a
+					class="block w-full rounded bg-amber-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-amber-700 focus:outline-none focus:ring active:bg-amber-500 sm:w-auto"
+					href="/search"
+				  >
+				  🔍 Search
+				  
+				</a>
+				
+				<a
+				class="block w-full rounded px-12 py-3 text-sm font-medium text-amber-600 shadow hover:text-amber-700 focus:outline-none focus:ring active:text-amber-500 sm:w-auto"
+				href="/random"
+				>
+				🍀 I'm feeling lucky 
+				  </a>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		  
 			
-			<h1 class="hover:animate-wiggle  mb-4 text-center text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl ">Gueze</h1>
-			<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48">Beer Database	.</p>
-			<section class="flex items-center justify-center ">
+			<section class="flex  flex-row flex-wrap max-w-4xl   mx-auto space-x-2">
 								
-				{% with cardName="Rechercher 🔍" cardText="Rechercher une bière" cardUrl="search" %}
+				{% with cardName="🔍 Search" cardText="Search a beer by type, name, origin, etc.." cardUrl="search" %}
 					{% include "card-generic.html"%}
 				{% endwith %}
 
-				{% with cardName="Ajouter 🍺" cardText="Ajouter une bière" %}
+				{% with cardName="🍺 Add a beer" cardText="Our database might be incomplete after all..." %}
 					{% include "card-generic.html"%}
 				{% endwith %}
 
-				{% with cardName="Supprimer ❌" cardText="Suprimmer une bière" %}
+				{% with cardName="🔃 Update" cardText="Especially useful for alsacian breweries 😒" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+
+				{% with cardName="🤔 About" cardText="How and why did we even make this" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+			
+			
+
+				{% with cardName="❌ Delete" cardText="Yup. Mistakes happen from time to time" %}
 					{% include "card-generic.html"%}
 				{% endwith %}
 				
 			</section>
-		</div>
-	</body>
+
+
+
+			{% include "footer.html" %}
+
+</body
