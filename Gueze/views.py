@@ -25,4 +25,4 @@ def about(request):
     return render(request, "about.html")   
 
 def beerview(request):
-    return render(request, "about.html")   
+    return render(request, "beer-view.html")   
