@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from .models import Beer
-from icecream import ic
+from .models import Beer,Style,Type
 # Create your views here.
 def index(request):
     return render(request, "index.html")
@@ -25,6 +24,11 @@ def about(request):
     return render(request, "about.html")   
 
 def beerview(request,id):
-    beer =  Beer.objects.get(id=id)
+
+    #! This implementation is terrible right now, using primary keys to join would be better
     
-    return render(request, "beer-view.html",context={"beer":beer})   
+    beer =  Beer.objects.get(id=id)
+    style = Style.objects.get(name=beer.style_name)
+    type = Type.objects.get(name=beer.style_group)
+    
+    return render(request, "beer-view.html",context={"beer":beer,"style":style,"type":type})   
