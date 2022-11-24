@@ -29,5 +29,7 @@ urlpatterns = [
     path('update', views.update , name='update'),
     path('about', views.about , name='about'),
     path('beer',views.beerview,name="beerview"),
-    path('beer/',views.beerview,name="beerview")
+    path('beer/',views.beerview,name="beerview"),
+    path('beer/<int:id>/', views.beerview, name="beerview")
+
 ]

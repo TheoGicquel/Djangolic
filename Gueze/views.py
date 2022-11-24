@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
-
+from .models import Beer
+from icecream import ic
 # Create your views here.
 def index(request):
     return render(request, "index.html")
@@ -24,5 +24,7 @@ def view(request, beer_id):
 def about(request):
     return render(request, "about.html")   
 
-def beerview(request):
-    return render(request, "beer-view.html")   
+def beerview(request,id):
+    beer =  Beer.objects.get(id=id)
+    
+    return render(request, "beer-view.html",context={"beer":beer})   

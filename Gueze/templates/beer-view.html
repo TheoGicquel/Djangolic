@@ -34,12 +34,12 @@
 		<div class="grid grid-cols-2 gap-4 md:grid-cols-1">
 		  <img
 			alt="Les Paul"
-			src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+			src=""
 			class="aspect-square w-full rounded-xl object-cover"
 		  />
   
 		  <div class="grid grid-cols-2 gap-4 lg:mt-4">
-			{% include "beer-svg.html" with fillcolor="#2a1b0d" %}
+			{% include "beer-svg.html" with fillcolor="#{{ beer.srm }}" %}
   
 			<img
 			  alt="Les Paul"
@@ -72,7 +72,7 @@
 		  <div class="mt-8 flex justify-between">
 			<div class="max-w-[35ch]">
 			  <h1 class="text-2xl font-bold">
-				[BEERNAME]
+				{{ beer.name }}
 			  </h1>
   
 			  {% comment %} <p class="mt-0.5 text-sm">Highest Rated Product</p> {% endcomment %}
@@ -143,7 +143,7 @@
 			  <div>
 				<div class="prose max-w-none group-open:hidden">
 				  <p>
-					[DESCRIPTION]
+					{{ beer.desc }}
 				  </p>
 				</div>
   
@@ -157,7 +157,7 @@
   
 			<div class="prose max-w-none pb-6">
 			  <p>
-				[EXTENDED-DESCRIPTION]
+				{{ beer.taste }}
 			  </p>
   
 			  <p>
