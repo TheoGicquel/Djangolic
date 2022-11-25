@@ -3,30 +3,7 @@
 	{% block content %}
 	<body>
 		{% include 'navbar.html' %}
-<!---		 -->
-
-
-
-		<!--
-  This component uses @tailwindcss/forms and @tailwindcss/typography
-
-  yarn add @tailwindcss/forms @tailwindcss/typography
-  npm install @tailwindcss/forms @tailwindcss/typography
-
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
-
-  @layer components {
-    .no-spinner {
-      -moz-appearance: textfield;
-    }
-
-    .no-spinner::-webkit-outer-spin-button,
-    .no-spinner::-webkit-inner-spin-button {
-      margin: 0;
-      -webkit-appearance: none;
-    }
-  }
--->
+		{% comment %} #TODO write proper about content  {% endcomment %}
 
 <section>
 	<div class="relative mx-auto max-w-screen-xl px-4 py-8">
@@ -168,7 +145,7 @@
   
 		  <form class="mt-8">
 			<fieldset>
-			  <legend class="mb-1 text-sm font-medium">Color</legend>
+			  <legend class="mb-1 text-sm font-medium">Type</legend>
   
 			  <div class="flow-root">
 				<div class="-m-0.5 flex flex-wrap">
@@ -183,7 +160,7 @@
 					<span
 					  class="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
 					>
-					  Texas Tea
+					  {{ style.name }}
 					</span>
 				  </label>
   
@@ -198,7 +175,7 @@
 					<span
 					  class="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
 					>
-					  Fiesta Red
+					  {{ type.name }}
 					</span>
 				  </label>
   
