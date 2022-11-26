@@ -1,0 +1,119 @@
+{
+    "currentPage": 1,
+    "numberOfPages": 603,
+    "totalResults": 30121,
+    "data": [
+      {
+        "id": "tmEthz",
+        "name": "\"Admiral\" Stache",
+        "nameDisplay": "\"Admiral\" Stache",
+        "description": "Milwaukee Brewing Co’s take on a classic European style. Baltic Porters are the stronger lager fermented cousin of the classic London Porter. The higher strength and cold fermentation help to create a smooth, less fruity porter, rich in roasted malt flavors and aromas. The “Admiral” Stache has a deep brown hue with a light caramel head. Toffee and milk chocolate dominate the flavor with subtle hints of dried fruit. One month of aging in Bourbon Barrels imparted a layer of vanilla and oak.\r\n\r\nWe first developed this beer in 2007. Our first attempted batch of beer at the 2nd street location was a Baltic Porter. What we ended up with became known as “Shake Down Nut Brown”. You can guess what went wrong from there… But, so many things right! Every year that has gone by, the beer has gotten a little bit stronger, in flavor and alcohol.\r\n\r\nWe use a black malt for the dark rich color and an extra special malt for the dried fruit flavors. Baltic Porters are fermented cold with a lager yeast. That long slow maturation creates a smooth flavor profile. The anticipation of the bourbon barrel aging it the most exciting part of this brew process. We want that oak character with hints of bourbon, we use 3rd run barrels for this result. Each batch has been slightly different from the last.",
+        "abv": "7",
+        "ibu": "23",
+        "glasswareId": 5,
+        "srmId": 37,
+        "availableId": 4,
+        "styleId": 104,
+        "isOrganic": "N",
+        "isRetired": "N",
+        "labels": {
+          "icon": "https://brewerydb-images.s3.amazonaws.com/beer/tmEthz/upload_3Jl1St-icon.png",
+          "medium": "https://brewerydb-images.s3.amazonaws.com/beer/tmEthz/upload_3Jl1St-medium.png",
+          "large": "https://brewerydb-images.s3.amazonaws.com/beer/tmEthz/upload_3Jl1St-large.png",
+          "contentAwareIcon": "https://brewerydb-images.s3.amazonaws.com/beer/tmEthz/upload_3Jl1St-contentAwareIcon.png",
+          "contentAwareMedium": "https://brewerydb-images.s3.amazonaws.com/beer/tmEthz/upload_3Jl1St-contentAwareMedium.png",
+          "contentAwareLarge": "https://brewerydb-images.s3.amazonaws.com/beer/tmEthz/upload_3Jl1St-contentAwareLarge.png"
+        },
+        "status": "verified",
+        "statusDisplay": "Verified",
+        "originalGravity": "1.071",
+        "createDate": "2012-09-09 13:35:27",
+        "updateDate": "2016-11-11 14:23:06",
+        "glass": {
+          "id": 5,
+          "name": "Pint",
+          "createDate": "2012-01-03 02:41:33"
+        },
+        "srm": {
+          "id": 37,
+          "name": "37",
+          "hex": "3F0708"
+        },
+        "available": {
+          "id": 4,
+          "name": "Seasonal",
+          "description": "Available at the same time of year, every year."
+        },
+        "style": {
+          "id": 104,
+          "categoryId": 9,
+          "category": {
+            "id": 9,
+            "name": "Other Lager",
+            "createDate": "2012-03-21 20:06:46"
+          },
+          "name": "Baltic-Style Porter",
+          "shortName": "Baltic Porter",
+          "description": "A true smooth cold-fermented and cold lagered beer, brewed with lager yeast. Black to very deep ruby/garnet in color. Overall, Baltic Porters have a very smooth lagered character with distinctive caramelized sugars, licorice and chocolate-like character of roasted malts and dark sugars. Roasted dark malts should not contribute bitterness, or astringent roast character. A low degree of smokiness from malt may be evident. Debitterized roast malts are best used for this style. Because of its alcoholic strength, aroma may include gentle (low) lager fruitiness (berries, grapes, plums, not banana; ale-like fruitiness from warm temperature fermentation is not appropriate), complex alcohols, cocoa-like, roast malt (and sometimes coffee-like roast barley, yet not bitter). Hop aroma is very low, though a hint of floral or sweet hop aroma can complement aromatics and flavor without dominance. Baltic Porters are not hop bitter dominated and expressed as low to medium-low. Baltic porters range from having medium to full body complemented with a medium-low to medium level of malty sweetness. No butterscotch-like diacetyl or sweet corn-like dimethylsulfide (DMS) should be apparent in aroma or flavor.",
+          "ibuMin": "35",
+          "ibuMax": "40",
+          "abvMin": "7.5",
+          "abvMax": "9",
+          "srmMin": "40",
+          "srmMax": "40",
+          "ogMin": "1.072",
+          "fgMin": "1.016",
+          "fgMax": "1.022",
+          "createDate": "2012-03-21 20:06:46",
+          "updateDate": "2015-04-07 15:41:46"
+        }
+      },
+      {
+        "id": "mwTzYN",
+        "name": "\"I'm Idaho!\" XPA",
+        "nameDisplay": "\"I'm Idaho!\" XPA",
+        "description": "This beer might be light in color but it's definitely flavour fuelled! We wanted to showcase tropical American hops in this XPA, and among them the new hop variety Idaho 7.",
+        "abv": "4.8",
+        "ibu": "40",
+        "styleId": 25,
+        "isOrganic": "N",
+        "isRetired": "N",
+        "labels": {
+          "icon": "https://brewerydb-images.s3.amazonaws.com/beer/mwTzYN/upload_79fUJ5-icon.png",
+          "medium": "https://brewerydb-images.s3.amazonaws.com/beer/mwTzYN/upload_79fUJ5-medium.png",
+          "large": "https://brewerydb-images.s3.amazonaws.com/beer/mwTzYN/upload_79fUJ5-large.png",
+          "contentAwareIcon": "https://brewerydb-images.s3.amazonaws.com/beer/mwTzYN/upload_79fUJ5-contentAwareIcon.png",
+          "contentAwareMedium": "https://brewerydb-images.s3.amazonaws.com/beer/mwTzYN/upload_79fUJ5-contentAwareMedium.png",
+          "contentAwareLarge": "https://brewerydb-images.s3.amazonaws.com/beer/mwTzYN/upload_79fUJ5-contentAwareLarge.png"
+        },
+        "status": "verified",
+        "statusDisplay": "Verified",
+        "createDate": "2018-07-11 19:38:21",
+        "updateDate": "2018-07-11 19:39:17",
+        "style": {
+          "id": 25,
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "name": "North American Origin Ales",
+            "createDate": "2012-03-21 20:06:45"
+          },
+          "name": "American-Style Pale Ale",
+          "shortName": "American Pale",
+          "description": "American pale ales range from deep golden to copper in color. The style is characterized by fruity, floral and citrus-like American-variety hop character producing medium to medium-high hop bitterness, flavor, and aroma. Note that the \"traditional\" style of this beer has its origins with certain floral, fruity, citrus-like, piney, resinous, or sulfur-like American hop varietals. One or more of these hop characters is the perceived end, but the perceived hop characters may be a result of the skillful use of hops of other national origins. American pale ales have medium body and low to medium maltiness. Low caramel character is allowable. Fruity-ester flavor and aroma should be moderate to strong. Diacetyl should be absent or present at very low levels. Chill haze is allowable at cold temperatures.",
+          "ibuMin": "30",
+          "ibuMax": "42",
+          "abvMin": "4.5",
+          "abvMax": "5.6",
+          "srmMin": "6",
+          "srmMax": "14",
+          "ogMin": "1.044",
+          "fgMin": "1.008",
+          "fgMax": "1.014",
+          "createDate": "2012-03-21 20:06:45",
+          "updateDate": "2015-04-07 15:25:18"
+        }
+      }
+    ],
+    "status": "success"
+  }
