@@ -1,11 +1,14 @@
 from django.shortcuts import render
-from .models import Beer,Style,Type
+from .models import Beer,Style,Type,Glass
 # Create your views here.
 def index(request):
     return render(request, "index.html")
 
 def search(request):
-    return render(request, "search.html")
+    styles = Style.objects.all()
+    types = Type.objects.all()
+    glass = Glass.objects.all()
+    return render(request, "search.html",context={"styles":styles,"types":types ,"glass":glass})
 
 def create(request):
     return render(request, "create.html")

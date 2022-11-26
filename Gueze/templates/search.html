@@ -1,9 +1,8 @@
 {% include 'base.html' %}
-	<body class="bg-gray-50 leading-normal tracking-normal">
-		{% include 'navbar.html' %}
-		
+<body class="bg-gray-50 leading-normal tracking-normal">
+  {% include 'navbar.html' %}
 
-		<!--
+  <!--
   This component uses @tailwindcss/forms
 
   yarn add @tailwindcss/forms
@@ -12,131 +11,173 @@
   plugins: [require('@tailwindcss/forms')]
 -->
 
-<section class="bg-gray-100">
-	<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-	  <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-		<div class="lg:col-span-2 lg:py-12">
-		
-		  <div class="mt-8">
-			<p class="text-2xl font-bold text-amber-600">
-			  Search Query
-			</a>
-  
-			<p class="mt-2">
-			  Please fill-out your search criterias in the form.
-			</p>
-		  </div>
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-lg">
+      <h1 class="text-center text-2xl font-bold text-amber-600 sm:text-3xl">
+        Search for a beer
+      </h1>
+
+      <p class="mx-auto mt-4 max-w-md text-center text-gray-500">
+        Please select at least one of the following
+        <span class="font-semibold text-amber-700">criterias</span> and we'll
+        try to find a beer that matches your preferences.
+      </p>
+
+      <form action="/search/result/" method="post" class="mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
+        <p class="text-lg font-medium">General info</p>
+		{% comment %}
+        <div>
+          <label for="email" class="text-sm font-medium">Email</label>
+
+          <div class="relative mt-1">
+            <input
+              type="email"
+              id="email"
+              class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+              placeholder="Enter email"
+            />
+
+            <span class="absolute inset-y-0 right-4 inline-flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+		{% endcomment %}
+
+
+        {% with nameid="name" label="Name" placeholder="Leffe,Guiness,etc.." type="text"%}
+		 {% include "search-form-textfield.html"%} 
+		{% endwith %}
+
+
+		<div class="flex-1 lg:flex-auto">
+			<label for="typeselect" class="block text-sm font-medium text-gray-700">Type</label>
+			<select id="typeselect" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm">
+			  <option></option>
+			  {% for type in types %}
+				<option value="{{ type.id }}">{{ type.name }}</option>
+			  {% endfor %}
+			</select>
 		</div>
-  
-		<div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-		  <form action="" class="space-y-4">
-			<div>
-			  <label class="sr-only" for="name">Name</label>
+
+		<div>
+			<label for="abv" class="text-sm font-medium">ABV (Alcohol percent by volume)</label>
+			
+				<div class="relative mt-1">
+				  <input
+					type="number"
+					min="0"
+					max="100"
+					id="abv"
+					class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+					placeholder="0-100"
+				  />
+				</div>
+			  </div>
+
+			
+
+
+
+	   <hr>
+	   <p class="text-lg font-medium">Taste</p>
+        <div class="flex-1 lg:flex-auto">
+          <label for="styleselect" class="block text-sm font-medium text-gray-700">Style</label>
+		  <select id="styleselect" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm">
+			<option></option>
+            {% for style in styles %}
+			  <option value="{{ style.id }}">{{ style.name }}</option>
+			{% endfor %}
+          </select>
+        </div>
+
+
+
+		<div>
+			<label for="ibu" class="text-sm font-medium">IBU (International Bitterness Units Scale)</label>
+			
+				<div class="relative mt-1">
+				  <input
+					type="number"
+					min="0"
+					max="200"
+					id="ibu"
+					class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+					placeholder="0-200"
+				  />
+				</div>
+			  </div>
+
+			
+
+
+
+		<hr>
+		<p class="text-lg font-medium">Other</p>
+
+
+
+	
+
+
+		{% with nameid="brewery" label="Brewery" placeholder="" type="text"%}
+		{% include "search-form-textfield.html"%} 
+	   {% endwith %}
+
+
+
+	   <div>
+		<label for="country" class="text-sm font-medium">Country of origin</label>
+		
+			<div class="relative mt-1">
 			  <input
-				class="w-full rounded-lg border-gray-200 p-3 text-sm"
-				placeholder="Name"
 				type="text"
-				id="name"
+				id="country"
+				class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+				placeholder="Belgium,France,etc.."
 			  />
 			</div>
-  
-			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-			  <div>
-				<label class="sr-only" for="email">Email</label>
-				<input
-				  class="w-full rounded-lg border-gray-200 p-3 text-sm"
-				  placeholder="Email address"
-				  type="email"
-				  id="email"
-				/>
-			  </div>
-  
-			  <div>
-				<label class="sr-only" for="phone">Phone</label>
-				<input
-				  class="w-full rounded-lg border-gray-200 p-3 text-sm"
-				  placeholder="Phone Number"
-				  type="tel"
-				  id="phone"
-				/>
-			  </div>
-			</div>
-  
-			<div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-			  <div>
-				<input class="sr-only" id="option1" type="radio" tabindex="-1" />
-				<label
-				  for="option1"
-				  class="block w-full rounded-lg border border-gray-200 p-3"
-				  tabindex="0"
-				>
-				  <span class="text-sm font-medium"> Option 1 </span>
-				</label>
-			  </div>
-  
-			  <div>
-				<input class="sr-only" id="option2" type="radio" tabindex="-1" />
-				<label
-				  for="option2"
-				  class="block w-full rounded-lg border border-gray-200 p-3"
-				  tabindex="0"
-				>
-				  <span class="text-sm font-medium"> Option 2 </span>
-				</label>
-			  </div>
-  
-			  <div>
-				<input class="sr-only" id="option3" type="radio" tabindex="-1" />
-				<label
-				  for="option3"
-				  class="block w-full rounded-lg border border-gray-200 p-3"
-				  tabindex="0"
-				>
-				  <span class="text-sm font-medium"> Option 3 </span>
-				</label>
-			  </div>
-			</div>
-  
-			<div>
-			  <label class="sr-only" for="message">Message</label>
-			  <textarea
-				class="w-full rounded-lg border-gray-200 p-3 text-sm"
-				placeholder="Message"
-				rows="8"
-				id="message"
-			  ></textarea>
-			</div>
-  
-			<div class="mt-4">
-			  <button
-				type="submit"
-				class="inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto"
-			  >
-				<span class="font-medium"> Send Enquiry </span>
-  
-				<svg
-				  xmlns="http://www.w3.org/2000/svg"
-				  class="ml-3 h-5 w-5"
-				  fill="none"
-				  viewBox="0 0 24 24"
-				  stroke="currentColor"
-				>
-				  <path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M14 5l7 7m0 0l-7 7m7-7H3"
-				  />
-				</svg>
-			  </button>
-			</div>
-		  </form>
+		  </div>
+
+
+		<div class="flex-1 lg:flex-auto">
+			<label for="glass" class="block text-sm font-medium text-gray-700">Glass</label>
+			<select id="glass" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm">
+			  <option></option>
+			  {% for cup in glass %}
+				<option value="{{ cup.id }}">{{ cup.name }}</option>
+			  {% endfor %}
+			</select>
 		</div>
-	  </div>
-	</div>
-  </section>
-  
-		
-		
-	
-	</body>
+
+
+
+
+        <button
+          type="submit"
+          class="block  w-full rounded-lg bg-amber-400 px-5 py-3 text-sm font-medium text-gray-400"
+        >
+          Search🍺
+        </button>
+
+        <p class="text-center text-sm text-gray-500">
+          Seomething missing ?
+          <a class="underline" href="">Add it to our database</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
