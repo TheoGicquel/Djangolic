@@ -7,6 +7,7 @@ class Glass(models.Model):
     def __unicode__(self):
         return self.name
 
+'''
 class glass(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
@@ -15,7 +16,7 @@ class glass(models.Model):
 
     def __unicode__(self):
         return self.name
-
+'''
 class HexColor(models.Model):
     hex = models.CharField(max_length=10)
 
