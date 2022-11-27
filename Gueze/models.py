@@ -71,6 +71,16 @@ class Beer(models.Model):
     label_medium = models.CharField(max_length=2048,blank=True)
     label_large = models.CharField(max_length=2048,blank=True)
 
+    def get_srm(self):
+        return "#" + self.srm
+    
+    def get_taste_short(self):
+        return self.taste[:100] + "..."
+        
 
     def __str__(self):
-        return self.name + " " + self.desc
+        out='beer{'
+        for attr, value in self.__dict__.items():
+            out+=("\n\t"+str(attr) + ": " + str(value))
+        out+='\n\r}'
+        return out

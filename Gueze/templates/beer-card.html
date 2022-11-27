@@ -1,0 +1,137 @@
+<!--
+  This component uses @tailwindcss/line-clamp
+
+  yarn add @tailwindcss/line-clamp
+  npm install @tailwindcss/line-clamp
+
+  plugins: [require('@tailwindcss/line-clamp')]
+-->
+<!--
+<code>
+  {{ beer }}
+</code>
+-->
+<article
+  class="rounded-lg border border-gray-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6">
+
+
+
+  <a href="#">
+    <h3 class="mt-0.5 text-lg font-medium text-gray-900">
+        {{ beer.name }}
+      
+    </h3>
+  </a>
+
+  <p class="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
+    {{ beer.get_taste_short }}
+  </p>
+
+  <div class="mt-4 flex flex-wrap gap-1">
+    <span
+      class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
+    >
+      {{ beer.style_name }}
+    </span>
+
+    <span
+      class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
+    >
+      {{ beer.style_group }}
+    </span>
+  </div>
+
+
+
+
+  <div class="mt-6 flex items-center gap-8 text-xs">
+    <div class="sm:inline-flex sm:shrink-0 sm:items-center">
+      
+      {% comment "" %}
+      <svg class="h-4 w-4 text-indigo-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+      </svg>
+      {% endcomment %}
+      
+      <div class="mt-1.5 sm:ml-3 sm:mt-0">
+        <p class="text-gray-500">ABV</p>
+
+        <p class="font-medium">{{ beer.abv }}% </p>
+      </div>
+    </div>
+
+    <div class="sm:inline-flex sm:shrink-0 sm:items-center">
+
+      {% comment "" %}
+      
+      <svg class="h-4 w-4 text-indigo-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+      </svg>
+      {% endcomment %}
+
+      <div class="mt-1.5 sm:ml-3 sm:mt-0">
+        <p class="text-gray-500">IBU</p>
+
+        <p class="font-medium">{{ beer.ibu }} </p>
+      </div>
+    </div>
+
+    <div class="sm:inline-flex sm:shrink-0 sm:items-center">
+
+          {% comment "" %}
+          <svg class="h-4 w-4 text-indigo-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:currentColor;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          {% endcomment %}
+          
+      <div class="mt-1.5 sm:ml-3 sm:mt-0">
+        <p class="text-gray-500">SRM</p>
+
+        <p class="font-medium whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs " style="background-color:{{beer.get_srm}}">{{ beer.get_srm}}</p>
+
+      </div>
+    </div>
+  
+
+    <div class="sm:inline-flex sm:shrink-0 sm:items-center">
+
+   
+      
+  <div class="mt-1.5 sm:ml-3 sm:mt-0">
+    <p class="text-gray-500">Origin</p>
+
+    <p class="font-medium whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs bg-gray-400" >{{ beer.get_origin}} <span class="fi fi-{{beer.get_origin_code}} "></span></p>
+    
+
+
+  </div>
+</div>
+
+
+    
+  
+  </div>
+
+
+
+
+  <div class="mt-6">
+  {% include "action-buttons.html" with beer=beer%} 
+</div>
+<a href="/beer/{{ beer.id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">Find out more <span aria-hidden="true"class="block transition group-hover:translate-x-0.5">&rarr;
+</span>
+</a>
+</article>
+
+
+
+
+
+<!--
+  This component uses @tailwindcss/line-clamp
+
+  yarn add @tailwindcss/line-clamp
+  npm install @tailwindcss/line-clamp
+
+  plugins: [require('@tailwindcss/line-clamp')]
+-->
