@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Beer,Style,Type,Glass
+import random
 # Create your views here.
 def index(request):
     return render(request, "index.html")
@@ -21,6 +22,11 @@ def delete(request):
 
 def view(request, beer_id):
     return render(request, "view.html")   
+
+def random_beer(request):
+    beers = list(Beer.objects.all())
+    beer = random.choice(beers)
+    return render(request, "beer-view.html",context={"beer":beer})  
 
 
 def about(request):
