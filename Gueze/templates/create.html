@@ -1,0 +1,292 @@
+{% include 'base.html' %}
+<body class="bg-gray-50 leading-normal tracking-normal">
+  {% include 'navbar.html' %}
+
+  <!--
+  This component uses @tailwindcss/forms
+
+  yarn add @tailwindcss/forms
+  npm install @tailwindcss/forms
+
+  plugins: [require('@tailwindcss/forms')]
+-->
+
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-lg">
+      <h1 class="text-center text-2xl font-bold text-green-600 sm:text-3xl">
+        Add a beer
+      </h1>
+
+      <p class="mx-auto mt-4 max-w-md text-center text-gray-500">
+        Please fill-in the form below as best as you can.
+      </p>
+
+      <form
+        action="/create/result/"
+        method="post"
+        class="mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl"
+      >
+        <p class="text-lg font-medium">General info</p>
+
+        {% with nameid="name" label="Name" placeholder="Leffe,Guiness,etc.." type="text"%}
+        
+        {% include "search-form-textfield.html"%} 
+        {% endwith %}
+
+        <div class="flex-1 lg:flex-auto">
+          <label
+            for="typeselect"
+            class="block text-sm font-medium text-gray-700"
+            >Type</label
+          >
+          <select
+            id="typeselect"
+            class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+          >
+            <option></option>
+            {% for type in types %}
+            <option value="{{ type.id }}">{{ type.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div>
+          <label for="abv" class="text-sm font-medium"
+            >ABV (Alcohol percent by volume)</label
+          >
+
+          <div class="relative mt-1">
+            <input
+              type="number"
+              min="0"
+              max="100"
+              id="abv"
+              class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+              placeholder="0-100"
+            />
+          </div>
+        </div>
+
+        <hr />
+        <p class="text-lg font-medium">Taste</p>
+        <div class="flex-1 lg:flex-auto">
+          <label
+            for="styleselect"
+            class="block text-sm font-medium text-gray-700"
+            >Style</label
+          >
+          <select
+            id="styleselect"
+            class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+          >
+            <option></option>
+            {% for style in styles %}
+            <option value="{{ style.id }}">{{ style.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div>
+          <label for="style-insert" class="text-sm font-medium"
+            >Style (if not found)</label
+          >
+
+          <div class="relative mt-1">
+            <input
+              type="text"
+              min="4"
+              max="50"
+              id="style-insert"
+              class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+              placeholder="Enter style"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="ibu" class="text-sm font-medium"
+            >IBU (International Bitterness Units Scale)</label
+          >
+
+          <div class="relative mt-1">
+            <input
+              type="number"
+              min="0"
+              max="200"
+              id="ibu"
+              class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+              placeholder="0-200"
+            />
+          </div>
+        </div>
+
+
+
+        <div>
+            <label for="taste-desc" class="text-sm font-medium">Taste description</label>
+  
+            <div class="relative mt-1">
+              <textarea maxlength="1500"
+                id="taste-desc" name="taste-desc"
+                class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                placeholder=""></textarea>
+            </div>
+          </div>
+
+
+        <hr>
+        <p class="text-lg font-medium">Other</p>
+
+
+        <div>
+            <label for="srm" class="text-sm font-medium"
+              >SRM Color (Hex)</label
+            >
+    
+            <div class="relative mt-1">
+              <input
+                type="text"
+                min="6"
+                max="7"
+                id="srm"
+                class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                placeholder="#f28e1c"
+              />
+            </div>
+        </div>
+
+
+
+        
+        <div>
+            <label for="logo-icon" class="text-sm font-medium"
+              >Logo (icon)</label
+            >
+    
+            <div class="relative mt-1">
+              <input
+                type="text"
+                min="0"
+                max="2048"
+                id="logo-icon"
+                class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                placeholder="http://example.com/logo.png"
+              />
+            </div>
+        </div>
+
+
+
+        <div>
+            <label for="logo-medium" class="text-sm font-medium"
+              >Logo (Medium)</label
+            >
+    
+            <div class="relative mt-1">
+              <input
+                type="text"
+                min="0"
+                max="2048"
+                id="logo-medium"
+                class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                placeholder="http://example.com/logo.png"
+              />
+            </div>
+        </div>
+
+
+
+
+        <div>
+            <label for="logo-large" class="text-sm font-medium"
+              >Logo (Large)</label
+            >
+    
+            <div class="relative mt-1">
+              <input
+                type="text"
+                min="0"
+                max="2048"
+                id="logo-large"
+                class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                placeholder="http://example.com/logo.png"
+              />
+            </div>
+        </div>
+
+
+
+        <hr>
+        <p class="text-lg font-medium">Other</p>
+
+        {% with nameid="brewery" label="Brewery" placeholder="" type="text"%}
+         {% include "search-form-textfield.html"%} 
+         {% endwith %}
+
+        <div>
+          <label for="country" class="text-sm font-medium"
+            >Country of origin</label
+          >
+
+          <div class="relative mt-1">
+            <input
+              type="text"
+              id="country"
+              class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+              placeholder="Belgium,France,etc.."
+            />
+          </div>
+        </div>
+
+        <div class="flex-1 lg:flex-auto">
+          <label for="glass" class="block text-sm font-medium text-gray-700"
+            >Glass</label
+          >
+          <select
+            id="glass"
+            class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+          >
+            <option></option>
+            {% for cup in glass %}
+            <option value="{{ cup.id }}">{{ cup.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div>
+        <label for="glass-insert" class="text-sm font-medium"
+          >Glass type (if not found)</label
+        >
+
+        <div class="relative mt-1">
+          <input
+            type="text"
+            min="4"
+            max="50"
+            id="glass-insert"
+            class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+            placeholder="Enter Glass type"
+          />
+        </div>
+        </div>
+
+
+
+
+
+
+        <button
+          type="submit"
+          class="block w-full rounded-lg bg-green-400 px-5 py-3 text-sm font-medium text-white"
+        >
+          Create 🎉
+        </button>
+
+        <p class="text-center text-sm text-gray-500">
+          Need help ?
+          <a class="underline" href="/about">Read the documentation</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
