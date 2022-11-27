@@ -31,6 +31,7 @@ urlpatterns = [
     path('beer',views.beerview,name="beerview"),
     path('beer/',views.beerview,name="beerview"),
     path('beer/<int:id>/', views.beerview, name="beerview"),
+    path('beer/all/', views.beerview_all, name="beerview"),
     path('random/',views.random_beer,name="random_beer")
 
 ]

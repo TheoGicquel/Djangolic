@@ -41,3 +41,12 @@ def beerview(request,id):
     type = Type.objects.get(name=beer.style_group)
     
     return render(request, "beer-view.html",context={"beer":beer,"style":style,"type":type})   
+
+
+def beerview_all(request):
+    
+    #! might be dangerous to fetch all data like this, remove before production
+    
+    beers = Beer.objects.all()
+    
+    return render(request, "search-results.html",context={"beers":beers})   
