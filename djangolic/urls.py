@@ -24,7 +24,9 @@ urlpatterns = [
     path('beers/<int:beer_id>/', views.beerview, name="beerview"),
     path('index', views.index , name='index'),
     path('', views.index , name='index'),
-    path('search', views.search , name='search'),
+    path('search', views.search_form , name='search'),
+    path('search/results/', views.search_results , name='search-results'),
+
     path('create', views.create , name='create'),
     path('update', views.update , name='update'),
     path('about', views.about , name='about'),

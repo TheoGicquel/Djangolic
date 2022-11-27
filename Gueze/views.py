@@ -1,15 +1,39 @@
 from django.shortcuts import render
-from .models import Beer,Style,Type,Glass
+from .models import Beer,Style,Type,Glass,Country,Brewery
+from .forms import SearchBeerForm
 import random
 # Create your views here.
 def index(request):
     return render(request, "index.html")
 
-def search(request):
+
+
+
+def search_results(request):
+    if(request.method == "POST"):
+        form = SearchBeerForm(request.POST)
+        f_name = request.POST.get("name")
+        f_ibu = request.POST.get("ibu")
+        f_abv = request.POST.get("abv")
+        
+        beers = Beer.objects.filter(name__icontains=f_name)
+        
+        return render(request, "search-results.html",context={"beers":beers})
+    elif(request.method == "GET"):
+        return render(request, "search.html")
+    
+    
+    #return render(request, "search-results.html",{"styles":styles,"types":types ,"glass":glass})
+
+def search_form(request):
+    form = SearchBeerForm
     styles = Style.objects.all()
     types = Type.objects.all()
-    glass = Glass.objects.all()
-    return render(request, "search.html",context={"styles":styles,"types":types ,"glass":glass})
+    glasses = Glass.objects.all()
+    countries = Country.objects.all()
+    breweries = Brewery.objects.all()
+    context = {"styles":styles,"types":types,"glasses":glasses,"countries":countries,"breweries":breweries,"form": form}
+    return render(request, "search.html",context)
 
 def create(request):
     return render(request, "create.html")
