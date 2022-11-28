@@ -39,7 +39,6 @@ class Style(models.Model):
 # general type of beer i.e lager, stout, etc..
 class Type(models.Model):
     name = models.CharField(max_length=50)
-    styles = models.ManyToManyField(Style, blank=True)
     def __str__(self):
         return self.name
 
@@ -47,17 +46,17 @@ class Type(models.Model):
 
 
 class Beer(models.Model):
-    name = models.CharField(max_length=100,blank=True)
+    beer_name = models.CharField(max_length=100,blank=True,null=True,name="beer_name")
     srm= models.CharField(max_length=8,blank=True,default="EBBB40")
-    abv= models.FloatField(blank=True)
-    ibu= models.FloatField(blank=True)
-    image = models.CharField(max_length=2048,blank=True)
-
-    glass=models.ForeignKey(Glass,blank=True,on_delete=models.CASCADE,related_name='glass+')
-    type = models.ForeignKey(Type, on_delete=models.CASCADE)
-    style = models.ForeignKey(Style, on_delete=models.CASCADE)
-    taste = models.CharField(max_length=1500,blank=True)
-    countries_sold_in = models.ManyToManyField(Country,blank=True,related_name='countries_sold+')
+    abv= models.FloatField(blank=True,null=True)
+    ibu= models.FloatField(blank=True,null=True)
+    image = models.CharField(max_length=2048,blank=True,null=True)
+    brewery = models.ForeignKey('Brewery',related_name="beer-brewery+",on_delete=models.DO_NOTHING)
+    glass=models.ForeignKey(Glass,blank=True,on_delete=models.CASCADE,related_name='glass+',null=True)
+    type = models.ForeignKey(Type, on_delete=models.CASCADE,blank=True,null=True)
+    style = models.ForeignKey(Style, on_delete=models.CASCADE,blank=True,null=True)
+    taste = models.CharField(max_length=1500,blank=True,null=True)
+    countries_sold_in = models.ManyToManyField(Country,related_name='countries_sold+')
       
 
     def get_srm(self):
@@ -68,12 +67,12 @@ class Beer(models.Model):
         
 
     def __str__(self):
-        return self.name
+        return self.beer_name
 
 class Brewery(models.Model):
     name = models.CharField(max_length=50,blank=True,unique=True)
     country = models.ForeignKey(Country, on_delete=models.CASCADE,blank=True,null=True)
-    beers = models.ManyToManyField(Beer)
+    beers = models.ManyToManyField(Beer,related_name="brewery-beers+",blank=True)
     def __unicode__(self):
         return self.name
     def __str__(self):
