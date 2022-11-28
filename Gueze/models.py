@@ -13,7 +13,6 @@ class Glass(models.Model):
 
 class Country(models.Model):
     name = models.CharField(max_length=100,unique=True)
-    code = models.CharField(max_length=4,unique=True)
 
     class Meta:
         verbose_name_plural = "Countries"
@@ -48,12 +47,12 @@ class Type(models.Model):
 
 
 class Beer(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,blank=True)
     srm= models.CharField(max_length=8,blank=True,default="EBBB40")
     abv= models.FloatField(blank=True)
     ibu= models.FloatField(blank=True)
     image = models.CharField(max_length=2048,blank=True)
-    
+
     glass=models.ForeignKey(Glass,blank=True,on_delete=models.CASCADE,related_name='glass+')
     type = models.ForeignKey(Type, on_delete=models.CASCADE)
     style = models.ForeignKey(Style, on_delete=models.CASCADE)
@@ -72,8 +71,8 @@ class Beer(models.Model):
         return self.name
 
 class Brewery(models.Model):
-    name = models.CharField(max_length=50)
-    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50,blank=True,unique=True)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE,blank=True,null=True)
     beers = models.ManyToManyField(Beer)
     def __unicode__(self):
         return self.name
