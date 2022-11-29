@@ -1,0 +1,5 @@
+name: Djangolic
+packages:
+- path: Gueze
+- path: theme
+- path: djangolic

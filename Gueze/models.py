@@ -46,7 +46,7 @@ class Type(models.Model):
 
 
 class Beer(models.Model):
-    beer_name = models.CharField(max_length=100,blank=True,null=True,name="beer_name")
+    name = models.CharField(max_length=100,blank=True,null=True)
     srm= models.CharField(max_length=8,blank=True,default="EBBB40")
     abv= models.FloatField(blank=True,null=True)
     ibu= models.FloatField(blank=True,null=True)
@@ -67,7 +67,7 @@ class Beer(models.Model):
         
 
     def __str__(self):
-        return self.beer_name
+        return self.name
 
 class Brewery(models.Model):
     name = models.CharField(max_length=50,blank=True,unique=True)

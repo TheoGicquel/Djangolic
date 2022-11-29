@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from .models import Beer,Style,Type,Glass,Country,Brewery
 from .forms import BeerSearchForm, CountrySearchForm, BrewerySearchForm,CountryCreateForm
+from django.shortcuts import redirect
 import random
+import os
+
 # Create your views here.
 def index(request):
     return render(request, "index.html")
@@ -10,36 +13,44 @@ def index(request):
 
 
 def search_results(request):
+    isValid = False
     if(request.method == "POST"):
-        beercrit = BeerSearchForm(request.POST)
-        brewerycrit = BrewerySearchForm(request.POST)
-        beers = Beer.objects.all()
-        if(beercrit.is_valid()):
-            beercrit.save()
-            beername = beercrit.cleaned_data["name"]
-            beers = beers.filter(name__icontains=beername)
-            beers = beers.filter(ibu__gte=beercrit.cleaned_data["ibu"])
-            beers = beers.filter(abv__gte=beercrit.cleaned_data["abv"])
-            beers = beers.filter(srm__gte=beercrit.cleaned_data["srm"])
-            beers = beers.filter(glass__name=beercrit.cleaned_data["glass"])
-            beers = beers.filter(type__name=beercrit.cleaned_data["type"])
-            beers = beers.filter(style__name=beercrit.cleaned_data["style"])
-            beers = beers.filter(countries_sold_in__name=beercrit.cleaned_data["countries_sold_in"])
-        if(brewerycrit.is_valid()):
-            brewerycrit.save()
-            beers = beers.filter(brewery__name__icontains=brewerycrit.cleaned_data["name"])
-            
+        beerFormData = BeerSearchForm(request.POST)
+        breweryFormData = BrewerySearchForm(request.POST)
+        all_beers = Beer.objects.all()
+        beers = all_beers
+        form_name_field_value = request.POST.get('name')
         
-        beers = Beer.objects.all()
-        #beers = Beer.objects.filter(name__icontains=f_name)
+        print("--------------------")
+        print(form_name_field_value)
+        print("--------------------")
+        
+        # get all beer with name
+        for e in Beer.objects.all():
+            if e.name != form_name_field_value:
+                beers = beers.exclude(name=e.name)
+        
+        
+        
+        if(beerFormData.is_valid()):
+          isValid = True
+          pass
+            
+        if(breweryFormData.is_valid()):
+          isValid = True
+            
         context = {
-            "beers":beers,
-            "beercrit":beercrit,
-            "brewerycrit":brewerycrit
+            "beers":beers.values,
+            "beerFormData":all_beers.values,
+            "breweryFormData":""
         }
-        return render(request, "search-results.html",context)
-    elif(request.method == "GET"):
-        return render(request, "search.html")
+        if(isValid):
+            return render(request, "beer/search-results.html",context)
+        else:
+            print(beerFormData.errors)
+            return redirect(search_form)
+    elif(request.method == "GET" ):
+        return render(request, "forms/search.html")
     
     
     #return render(request, "search-results.html",{"styles":styles,"types":types ,"glass":glass})
@@ -48,50 +59,40 @@ def search_form(request):
     beer_form = BeerSearchForm
     country_form = CountrySearchForm
     brewery_from = BrewerySearchForm
-    styles = Style.objects.all()
-    types = Type.objects.all()
-    glasses = Glass.objects.all()
-    countries = Country.objects.all()
-    breweries = Brewery.objects.all()
     
     context = {
-        "styles":styles,
-        "types":types,
-        "glasses":glasses,
-        "countries":countries,
-        "breweries":breweries,
         "beer_form": beer_form,
         "country_form":country_form,
         "brewery_form":brewery_from
     }
 
     
-    return render(request, "search.html",context)
+    return render(request, "forms/search.html",context)
 
 def create(request):
     form_country = CountryCreateForm
     
-    return render(request, "create.html")
+    return render(request, "forms/create.html")
 
 def update(request):
-    return render(request, "update.html")
+    return render(request, "forms/update.html")
 
 def delete(request, beer_id):
     beer = Beer.objects.get(id=beer_id)
     beer.delete()
-    return render(request, "delete.html")
+    return render(request, "forms/delete.html")
 
 def view(request, beer_id):
-    return render(request, "view.html")   
+    return render(request, "beer/beer-view.html")   
 
 def random_beer(request):
     beers = list(Beer.objects.all())
     beer = random.choice(beers)
-    return render(request, "beer-view.html",context={"beer":beer})  
+    return render(request, "beer/beer-view.html",context={"beer":beer})  
 
 
 def about(request):
-    return render(request, "about.html")   
+    return render(request, "about/about.html")   
 
 def beerview(request,id):
 
@@ -101,7 +102,7 @@ def beerview(request,id):
     style = Style.objects.get(name=beer.style_name)
     type = Type.objects.get(name=beer.style_group)
     
-    return render(request, "beer-view.html",context={"beer":beer,"style":style,"type":type})   
+    return render(request, "beer/beer-view.html",context={"beer":beer,"style":style,"type":type})   
 
 
 def beerview_all(request):
@@ -110,4 +111,4 @@ def beerview_all(request):
     
     beers = Beer.objects.all()
     
-    return render(request, "search-results.html",context={"beers":beers})   
+    return render(request, "beer/search-results.html",context={"beers":beers})   
