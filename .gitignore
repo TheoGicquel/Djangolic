@@ -546,3 +546,11 @@ pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/django,virtualenv,venv,python,node,pycharm,visualstudiocode,sass
 djangolic/.env
+### CypressIO ###
+# gitignore template for the CypressIO, browser test framework
+# website: https://www.cypress.io/
+
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
