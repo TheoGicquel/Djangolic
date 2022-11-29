@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from Gueze import views 
+from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
+
 urlpatterns = [
+    path("favicon.ico",RedirectView.as_view(url=staticfiles_storage.url("favicon.ico")),),
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
     path('beers/', include('Gueze.urls')),
@@ -24,7 +28,9 @@ urlpatterns = [
     path('beers/<int:beer_id>/', views.beerview, name="beerview"),
     path('index', views.index , name='index'),
     path('', views.index , name='index'),
-    path('search', views.search , name='search'),
+    path('search', views.search_form , name='search'),
+    path('search/results/', views.search_results , name='search-results'),
+
     path('create', views.create , name='create'),
     path('update', views.update , name='update'),
     path('about', views.about , name='about'),

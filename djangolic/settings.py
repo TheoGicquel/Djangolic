@@ -47,7 +47,16 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'django_browser_reload',
+    'django_extensions',
+    'crispy_forms',
+    'crispy_tailwind',
 ]
+
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -141,3 +150,11 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+GRAPH_MODELS = {
+    'all_applications': False,
+    'group_models': True,
+    'app_models': [
+        "Gueze"
+    ]
+}

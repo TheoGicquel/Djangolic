@@ -1,38 +1,36 @@
 from django.db import models
 
 class Glass(models.Model):
-    id = models.AutoField(primary_key=True, unique=True)
     name = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = "Beer Glasses"
 
     def __unicode__(self):
         return self.name
-
-
-
-
-
-
-class Location(models.Model):
-    id = models.AutoField(primary_key=True)
-
-    name = models.CharField(max_length=100)
-    country = models.CharField(max_length=255)
-
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
+class Country(models.Model):
+    name = models.CharField(max_length=100,unique=True)
+
+    class Meta:
+        verbose_name_plural = "Countries"
+
+    def __str__(self):
+        return self.name
+    def get_code(self):
+        return self.code
 
 
-class Brewery(models.Model):
-    id = models.AutoField(primary_key=True)
 
-    name = models.CharField(max_length=255)
-    description = models.CharField(max_length=5000)
-    website = models.CharField(max_length=5000)
-    update_at = models.DateField()
-    location_brewery = models.ForeignKey(Location, on_delete=models.CASCADE)
 
-    def __unicode__(self):
+
+
+# specialized kind of beer
+class Style(models.Model):
+    name = models.CharField(max_length=50)
+    def __str__(self):
         return self.name
 
 
@@ -45,31 +43,21 @@ class Type(models.Model):
         return self.name
 
 
-# more refined type of beer ex: irish stout, or other special kind of beer
-class Style(models.Model):
-    name = models.CharField(max_length=50)
-    type = models.ForeignKey(Type,blank=True,on_delete=models.CASCADE,related_name="type+")
-    def __str__(self):
-        return self.name
-
 
 
 class Beer(models.Model):
-    name = models.CharField(max_length=100)
-     
-    desc= models.CharField(max_length=1500,blank=True)
+    name = models.CharField(max_length=100,blank=True,null=True)
     srm= models.CharField(max_length=8,blank=True,default="EBBB40")
-    glass=models.ForeignKey(Glass,blank=True,on_delete=models.CASCADE,related_name='glass+')
-    abv= models.IntegerField(blank=True)
-    ibu= models.IntegerField(blank=True)
-    style_name = models.CharField(max_length=100,blank=True)
-    style_group = models.CharField(max_length=100,blank=True)
-    taste= models.CharField(max_length=1500,blank=True)
-    
-        
-    label_icon = models.CharField(max_length=2048,blank=True)
-    label_medium = models.CharField(max_length=2048,blank=True)
-    label_large = models.CharField(max_length=2048,blank=True)
+    abv= models.FloatField(blank=True,null=True)
+    ibu= models.FloatField(blank=True,null=True)
+    image = models.CharField(max_length=2048,blank=True,null=True)
+    brewery = models.ForeignKey('Brewery',related_name="beer-brewery+",on_delete=models.DO_NOTHING)
+    glass=models.ForeignKey(Glass,blank=True,on_delete=models.CASCADE,related_name='glass+',null=True)
+    type = models.ForeignKey(Type, on_delete=models.CASCADE,blank=True,null=True)
+    style = models.ForeignKey(Style, on_delete=models.CASCADE,blank=True,null=True)
+    taste = models.CharField(max_length=1500,blank=True,null=True)
+    countries_sold_in = models.ManyToManyField(Country,related_name='countries_sold+')
+      
 
     def get_srm(self):
         return "#" + self.srm
@@ -79,8 +67,16 @@ class Beer(models.Model):
         
 
     def __str__(self):
-        out='beer{'
-        for attr, value in self.__dict__.items():
-            out+=("\n\t"+str(attr) + ": " + str(value))
-        out+='\n\r}'
-        return out
+        return self.name
+
+class Brewery(models.Model):
+    name = models.CharField(max_length=50,blank=True,unique=True)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE,blank=True,null=True)
+    beers = models.ManyToManyField(Beer,related_name="brewery-beers+",blank=True)
+    def __unicode__(self):
+        return self.name
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name_plural = "Breweries"

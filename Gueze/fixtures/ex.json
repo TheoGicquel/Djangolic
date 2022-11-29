@@ -1,0 +1,213 @@
+[
+{
+    "model": "Gueze.glass",
+    "pk": 1,
+    "fields": {
+        "name": "pint glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 2,
+    "fields": {
+        "name": "American pint glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 3,
+    "fields": {
+        "name": "Imperial pint glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 4,
+    "fields": {
+        "name": "tulip glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 5,
+    "fields": {
+        "name": "pilsner glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 6,
+    "fields": {
+        "name": "ipa glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 7,
+    "fields": {
+        "name": "beer mug"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 8,
+    "fields": {
+        "name": "goblet"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 9,
+    "fields": {
+        "name": "stange glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 10,
+    "fields": {
+        "name": "teku glass"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 11,
+    "fields": {
+        "name": "glass boot"
+    }
+},
+{
+    "model": "Gueze.glass",
+    "pk": 12,
+    "fields": {
+        "name": "kwak glass and stand"
+    }
+},
+{
+    "model": "Gueze.country",
+    "pk": 1,
+    "fields": {
+        "name": "ireland"
+    }
+},
+{
+    "model": "Gueze.country",
+    "pk": 2,
+    "fields": {
+        "name": "France"
+    }
+},
+{
+    "model": "Gueze.country",
+    "pk": 3,
+    "fields": {
+        "name": "Belgium"
+    }
+},
+{
+    "model": "Gueze.style",
+    "pk": 1,
+    "fields": {
+        "name": "irish stout"
+    }
+},
+{
+    "model": "Gueze.type",
+    "pk": 1,
+    "fields": {
+        "name": "stout"
+    }
+},
+{
+    "model": "Gueze.type",
+    "pk": 2,
+    "fields": {
+        "name": "amber beer"
+    }
+},
+{
+    "model": "Gueze.beer",
+    "pk": 1,
+    "fields": {
+        "beer_name": "Guiness Draught",
+        "srm": "180000",
+        "abv": 4.4,
+        "ibu": 45.0,
+        "image": "https://logos-marques.com/wp-content/uploads/2020/12/logo-Guinness.jpg",
+        "brewery": 1,
+        "glass": 1,
+        "type": 1,
+        "style": 1,
+        "taste": "Guinness has a malty sweetness and a hoppy bitterness, with notes of coffee and chocolate. A roasted flavor also comes through, courtesy of the roasted unmalted barley that goes into its brewing. It has a sweet nose, with hints of malt breaking through, and its palate is smooth, creamy, and balanced.",
+        "countries_sold_in": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "Gueze.beer",
+    "pk": 2,
+    "fields": {
+        "beer_name": "Pauwel Kwak",
+        "srm": "f28e1c",
+        "abv": 8.4,
+        "ibu": 20.0,
+        "image": "https://d33za54wpumlhy.cloudfront.net/eyJidWNrZXQiOiJzYXZldXJiaWVyZSIsImtleSI6ImltZy9wLzMwMy0xMjk4MC5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjgwfSwicG5nIjp7InF1YWxpdHkiOjgwfSwicmVzaXplIjp7IndpZHRoIjozMjgsImhlaWdodCI6MjI1LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjowLCJnIjowLCJiIjowLCJhbHBoYSI6MH19fX0=",
+        "brewery": 5,
+        "glass": 12,
+        "type": 2,
+        "style": null,
+        "taste": "Pauwel Kwak is a Belgian beer brewed by Bosteels in Buggenhout. Kwak is an amber beer, which is relatively strong at 8.4% ABV. It gets its name from an 18th century innkeeper and brewer. Kwak is a warming beer with hints of liquorice and a slightly spicy character of coriander and hops.",
+        "countries_sold_in": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "Gueze.brewery",
+    "pk": 1,
+    "fields": {
+        "name": "St. James's Gate Brewery",
+        "country": 1,
+        "beers": []
+    }
+},
+{
+    "model": "Gueze.brewery",
+    "pk": 2,
+    "fields": {
+        "name": "Brasserie Fischer",
+        "country": 2,
+        "beers": []
+    }
+},
+{
+    "model": "Gueze.brewery",
+    "pk": 3,
+    "fields": {
+        "name": "Brasserie Affligem",
+        "country": 3,
+        "beers": []
+    }
+},
+{
+    "model": "Gueze.brewery",
+    "pk": 4,
+    "fields": {
+        "name": "Leffe Brewery",
+        "country": 3,
+        "beers": []
+    }
+},
+{
+    "model": "Gueze.brewery",
+    "pk": 5,
+    "fields": {
+        "name": "Bosteels",
+        "country": 3,
+        "beers": []
+    }
+}
+]
