@@ -10,6 +10,14 @@ def index(request):
     return render(request, "index.html")
 
 
+def search_results_all(request):
+    beers = Beer.objects.all()
+    
+    context = {
+    "beers":beers,
+    }
+        
+    return render(request, "beer/search-results.html",context)
 
 
 def search_results(request):
@@ -54,6 +62,15 @@ def search_results(request):
     
     
     #return render(request, "search-results.html",{"styles":styles,"types":types ,"glass":glass})
+def dummy_results(request):
+    beers = Beer.objects.all()
+    
+    context = {
+         
+    }
+    return render(request, "beers/search-results.html",context)
+    
+
 
 def search_form(request):
     beer_form = BeerSearchForm

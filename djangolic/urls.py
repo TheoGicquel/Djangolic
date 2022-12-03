@@ -30,6 +30,8 @@ urlpatterns = [
     path('', views.index , name='index'),
     path('search', views.search_form , name='search'),
     path('search/results/', views.search_results , name='search-results'),
+    path('search/results/all/', views.search_results_all , name='search-results-all'),
+
 
     path('create', views.create , name='create'),
     path('update', views.update , name='update'),
