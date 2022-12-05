@@ -3,49 +3,48 @@ from django.forms import ModelForm
 from .models import Beer, Glass, Country, Style, Type, Brewery
 #! TODO : Try to add tailwind classes to forms
 # beer
-class BeerSearchForm(ModelForm.Form):
+
+class BeerSearchForm(forms.models.ModelForm):
     class Meta:
         model = Beer
         fields = ('name','ibu','abv','glass','type','style','countries_sold_in','srm')
 
 
-class BeerCreateForm(ModelForm.Form):
+class BeerCreateForm(ModelForm):
     class Meta:
         model = Beer
         fields = ('name', 'ibu', 'abv', 'glass', 'type', 'style', 'countries_sold_in', 'taste', 'image', 'srm')
 
         # Je sais plus exactement comment les mettre dans la bdd a regarder
-        name = ModelForm.Charfield()
-        ibu = ModelForm.Charfield()
+        name = forms.CharField()
+        ibu = forms.CharField()
 
-        abv = ModelForm.Charfield()
-        glass = ModelForm.Charfield()
-        typeselect = ModelForm.Charfield()
+        abv = forms.CharField()
+        glass = forms.CharField()
+        typeselect = forms.CharField()
 
-        styleselect = ModelForm.Charfield()
-        country = ModelForm.Charfield()
-        tastedesc = ModelForm.Charfield()
-        # A modifier pour les logo
-        logo_icon = ModelForm.Charfield()
-        logo_medium = ModelForm.Charfield()
-        logo_large = ModelForm.Charfield()
+        styleselect = forms.CharField()
+        country = forms.CharField()
+        tastedesc = forms.CharField()
+        # image url field
+        image = forms.CharField()
 
-        srm = ModelForm.Charfield()
+        srm = forms.CharField()
 
 
 # brewery
 
-class BreweryCreateForm(ModelForm.Form):
+class BreweryCreateForm(ModelForm):
     class Meta:
         model = Brewery
         fields = ('name','country','beers')
 
-        name = ModelForm.Charfield()
-        country = ModelForm.Charfield()
-        beers = ModelForm.Charfield()
+        name = forms.CharField()
+        country = forms.CharField()
+        beers = forms.CharField()
 
 
-class BrewerySearchForm(ModelForm.Form):
+class BrewerySearchForm(ModelForm):
     class Meta:
         model = Brewery
         fields = ('name','country')
@@ -53,13 +52,13 @@ class BrewerySearchForm(ModelForm.Form):
 
 
 # country
-class CountryCreateForm(ModelForm.Form):
+class CountryCreateForm(ModelForm):
     class Meta:
         model = Country
         fields = ('name',)
-        country = ModelForm.Charfield()
+        country = forms.CharField()
 
-class CountrySearchForm(ModelForm.Form):
+class CountrySearchForm(ModelForm):
     class Meta:
         model = Country
         fields = ('name',)
