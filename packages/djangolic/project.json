@@ -1,0 +1,52 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "sourceRoot": "packages/djangolic",
+    "targets": {
+      "install": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+              "pip install -r requirements.txt",
+              "npm install"
+          ]
+        }
+      },
+      "serve": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+              "python3 manage.py runserver 127.0.0.1:8000"
+            
+          ]
+        }
+      },
+      "serve-d": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic/src",
+          "commands": [
+            {
+              "command": "python3 manage.py runserver 127.0.0.1:8000 &"
+            }
+          ]
+        }
+      },
+      "migrations": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+            
+              "python3 manage.py makemigrations",
+              "python3 manage.py migrate",
+              "python3 manage.py syncdb"
+            
+          ]
+        }
+      }
+    },
+    "implicitDependencies": []
+  }
