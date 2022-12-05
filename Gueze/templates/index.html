@@ -46,19 +46,77 @@
 					{% include "card-generic.html"%}
 				{% endwith %}
 
-				{% with cardName="🍺 Add a beer" cardText="Our database might be incomplete after all..." cardUrl="create" %}
+				{% with cardName="🍺 Add a beer" cardText="Our database might be incomplete after all..." cardUrl="beer/create" %}
 					{% include "card-generic.html"%}
 				{% endwith %}
+				{% with cardName="🍺 Edit Beer" cardText="Made a mistake" cardUrl="beer/edit" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+
+
+				{% with cardName="🏭 Add brewerey" cardText="Add a brewery" cardUrl="brewery/create" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+				
+
+				{% with cardName="🏭 Edit brewerey" cardText="Edit a brewery" cardUrl="brewery/edit" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+
+
+
+
+				{% with cardName="🚩 Add Country" cardText="Add a country" cardUrl="country/create" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+				
+
+				{% with cardName="🚩 Edit Country" cardText="Edit a country" cardUrl="country/edit" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+				
+
+				{% with cardName="🍷 Add Glass" cardText="Add a glass" cardUrl="glass/create" %}
+				{% include "card-generic.html"%}
+				{% endwith %}
+			
+
+				{% with cardName="🍷 Edit Glass" cardText="Edit a glass" cardUrl="glass/edit" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+
+
+				{% with cardName="Add Style" cardText="Add a style" cardUrl="style/create" %}
+				{% include "card-generic.html"%}
+				{% endwith %}
+			
+
+				{% with cardName="Edit style" cardText="Edit a style" cardUrl="style/edit" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+
+
+
+				{% with cardName="Add type" cardText="Add a type" cardUrl="type/create" %}
+				{% include "card-generic.html"%}
+				{% endwith %}
+			
+
+				{% with cardName="Edit type" cardText="Edit a type" cardUrl="type/edit" %}
+					{% include "card-generic.html"%}
+				{% endwith %}
+
 				{%  comment %}
 				{% with cardName="🔃 Update" cardText="Especially useful for alsacian breweries 😒" %}
 					{% include "card-generic.html"%}
 				{% endwith %}
-
+				{% endcomment %}
 				{% with cardName="🤔 About" cardText="How and why did we even make this" %}
 					{% include "card-generic.html"%}
 				{% endwith %}
 				
 				
+				{% comment %}
 				
 				{% with cardName="❌ Delete" cardText="Yup. Mistakes happen from time to time" %}
 				{% include "card-generic.html"%}
