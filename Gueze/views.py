@@ -7,9 +7,24 @@ import os
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    context ={
+        "title":"Gueze|index",
+        "beercount":Beer.objects.count(),
+        "stylecount":Style.objects.count(),
+        "brewerycount": Brewery.objects.count(),
+        
+    }
+    return render(request, "index.html",context)
 
 
+def search_results_all(request):
+    beers = Beer.objects.all()
+    
+    context = {
+    "beers":beers,
+    }
+        
+    return render(request, "beer/search-results.html",context)
 
 
 def search_results(request):
@@ -53,7 +68,7 @@ def search_results(request):
         return render(request, "forms/search.html")
     
     
-    #return render(request, "search-results.html",{"styles":styles,"types":types ,"glass":glass})
+
 
 def search_form(request):
     beer_form = BeerSearchForm
@@ -94,15 +109,13 @@ def random_beer(request):
 def about(request):
     return render(request, "about/about.html")   
 
-def beerview(request,id):
+def beerview(request,beer_id):
 
     #! This implementation is terrible right now, using primary keys to join would be better
     
-    beer =  Beer.objects.get(id=id)
-    style = Style.objects.get(name=beer.style_name)
-    type = Type.objects.get(name=beer.style_group)
+    beer =  Beer.objects.get(id=beer_id)
     
-    return render(request, "beer/beer-view.html",context={"beer":beer,"style":style,"type":type})   
+    return render(request, "beer/beer-view.html",context={"beer":beer})   
 
 
 def beerview_all(request):

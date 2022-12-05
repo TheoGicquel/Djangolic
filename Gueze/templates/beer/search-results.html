@@ -16,14 +16,16 @@
       <h1 class="text-center text-2xl font-bold text-amber-600 sm:text-3xl">
         Search results
       </h1>
-      <p>{{ brewerycrit }}</p>
 
-      <p>{{ beercrit }}</p>
+
+
+      
+
 
       {% for current_beer in beers %}
 
 
-        {% include "beer-card.html" with beer=current_beer%} 
+        {% include "beer/beer-card.html" with beer=current_beer%} 
 
 
 <option value="{{ beer.id }}">{{ beer.name }}</option>
