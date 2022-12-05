@@ -1,7 +1,7 @@
 <article
-  class="rounded-lg bg-white border border-gray-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6"
+  class="rounded-lg bg-white border border-gray-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6 mt-4"
 >
-  <a href="#">
+  <a href="/beers/{{beer.id}}/">
     <h3 class="mt-0.5 text-lg font-medium text-gray-900">{{ beer.name }}</h3>
   </a>
 
@@ -14,7 +14,7 @@
     class="whitespace-nowrap rounded-full border-2 border-solid border-blue-300 bg-purple-100 px-2.5 py-0.5 text-xs text-blue-600"
   >
   <a href="/breweries/{{beer.brewery.id}}/view">
-  <i class="fa-solid fa-industry"></i>
+  <em class="fa-solid fa-industry"></em>
     {{ beer.brewery.name }}
   </a>
   </span>
