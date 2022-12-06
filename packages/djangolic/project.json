@@ -13,6 +13,16 @@
           ]
         }
       },
+      "setup-env": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+            "touch ./djangolic/.env",
+            "cat ./djangolic/.env.example > ./djangolic/.env"
+          ]
+        }
+      },
       "serve": {
         "executor": "nx:run-commands",
         "options": {
@@ -26,23 +36,57 @@
       "serve-d": {
         "executor": "nx:run-commands",
         "options": {
-          "cwd": "packages/djangolic/src",
+          "cwd": "packages/djangolic",
           "commands": [
             {
-              "command": "python3 manage.py runserver 127.0.0.1:8000 &"
+              "command": "python3 manage.py runserver"
             }
           ]
         }
       },
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+            {
+              "command": "python manage.py tailwind build"
+            }
+          ]
+        }
+      },
+      "dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+            
+            "python3 manage.py tailwind start &",
+            "python3 manage.py runserver"
+            
+          ]
+        }
+      },
+      "watch": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+            
+            "python manage.py tailwind start"            
+          ]
+        }
+      },
+
       "migrations": {
         "executor": "nx:run-commands",
         "options": {
           "cwd": "packages/djangolic",
           "commands": [
             
-              "python3 manage.py makemigrations",
-              "python3 manage.py migrate",
-              "python3 manage.py syncdb"
+              "python manage.py makemigrations",
+              "python manage.py migrate",
+              "python manage.py migrate --run-syncdb"
             
           ]
         }
