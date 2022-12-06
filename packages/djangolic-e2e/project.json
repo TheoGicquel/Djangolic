@@ -1,0 +1,37 @@
+{
+  "name": "djangolic-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/djangolic-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "packages/djangolic-e2e/cypress.config.ts",
+        "baseUrl": "http://127.0.0.1:8000",
+        "testingType": "e2e"
+      }
+    },
+
+    "gui": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/djangolic-e2e",
+        "commands": [
+          {
+            "command": "npx cypress open"
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/djangolic-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["djangolic"]
+}
