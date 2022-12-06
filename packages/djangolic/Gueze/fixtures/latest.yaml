@@ -1,0 +1,1115 @@
+- model: admin.logentry
+  pk: 1
+  fields:
+    action_time: 2022-12-06 13:27:56.744644+00:00
+    user: 1
+    content_type: 7
+    object_id: '1'
+    object_repr: koetsiersglas
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 2
+  fields:
+    action_time: 2022-12-06 13:29:17.332486+00:00
+    user: 1
+    content_type: 7
+    object_id: '2'
+    object_repr: Goblet
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 3
+  fields:
+    action_time: 2022-12-06 13:29:23.305485+00:00
+    user: 1
+    content_type: 7
+    object_id: '3'
+    object_repr: Ipa
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 4
+  fields:
+    action_time: 2022-12-06 13:29:33.548940+00:00
+    user: 1
+    content_type: 7
+    object_id: '4'
+    object_repr: Wooden Mug
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 5
+  fields:
+    action_time: 2022-12-06 13:29:39.517410+00:00
+    user: 1
+    content_type: 7
+    object_id: '5'
+    object_repr: Stein Mug
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 6
+  fields:
+    action_time: 2022-12-06 13:29:47.001736+00:00
+    user: 1
+    content_type: 7
+    object_id: '6'
+    object_repr: Glass Mug
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 7
+  fields:
+    action_time: 2022-12-06 13:29:51.939049+00:00
+    user: 1
+    content_type: 7
+    object_id: '7'
+    object_repr: Flute
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 8
+  fields:
+    action_time: 2022-12-06 13:29:56.603037+00:00
+    user: 1
+    content_type: 7
+    object_id: '8'
+    object_repr: Snifter
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 9
+  fields:
+    action_time: 2022-12-06 13:30:01.639705+00:00
+    user: 1
+    content_type: 7
+    object_id: '9'
+    object_repr: Shaker Pint
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 10
+  fields:
+    action_time: 2022-12-06 13:30:06.021583+00:00
+    user: 1
+    content_type: 7
+    object_id: '10'
+    object_repr: Stange
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 11
+  fields:
+    action_time: 2022-12-06 13:30:18.975803+00:00
+    user: 1
+    content_type: 7
+    object_id: '11'
+    object_repr: Thistle
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 12
+  fields:
+    action_time: 2022-12-06 13:30:25.540759+00:00
+    user: 1
+    content_type: 7
+    object_id: '12'
+    object_repr: Pilsner
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 13
+  fields:
+    action_time: 2022-12-06 13:30:31.499901+00:00
+    user: 1
+    content_type: 7
+    object_id: '13'
+    object_repr: Nonic Pint
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 14
+  fields:
+    action_time: 2022-12-06 13:30:35.640219+00:00
+    user: 1
+    content_type: 7
+    object_id: '14'
+    object_repr: Weizen
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 15
+  fields:
+    action_time: 2022-12-06 13:30:40.282020+00:00
+    user: 1
+    content_type: 7
+    object_id: '15'
+    object_repr: Tulip
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 16
+  fields:
+    action_time: 2022-12-06 13:30:48.265084+00:00
+    user: 1
+    content_type: 7
+    object_id: '16'
+    object_repr: Boot
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 17
+  fields:
+    action_time: 2022-12-06 13:30:58.067237+00:00
+    user: 1
+    content_type: 7
+    object_id: '17'
+    object_repr: Tulip Pint
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 18
+  fields:
+    action_time: 2022-12-06 13:31:18.884099+00:00
+    user: 1
+    content_type: 7
+    object_id: '18'
+    object_repr: Glass
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 19
+  fields:
+    action_time: 2022-12-06 13:31:49.180244+00:00
+    user: 1
+    content_type: 8
+    object_id: '1'
+    object_repr: France
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 20
+  fields:
+    action_time: 2022-12-06 13:31:53.647787+00:00
+    user: 1
+    content_type: 8
+    object_id: '2'
+    object_repr: Belgium
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 21
+  fields:
+    action_time: 2022-12-06 13:32:07.913414+00:00
+    user: 1
+    content_type: 8
+    object_id: '3'
+    object_repr: United States of America
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 22
+  fields:
+    action_time: 2022-12-06 13:32:11.669448+00:00
+    user: 1
+    content_type: 8
+    object_id: '4'
+    object_repr: Japan
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 23
+  fields:
+    action_time: 2022-12-06 13:32:25.925499+00:00
+    user: 1
+    content_type: 8
+    object_id: '5'
+    object_repr: Czech Republic
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 24
+  fields:
+    action_time: 2022-12-06 13:32:30.284039+00:00
+    user: 1
+    content_type: 8
+    object_id: '6'
+    object_repr: Ireland
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 25
+  fields:
+    action_time: 2022-12-06 13:32:46.190308+00:00
+    user: 1
+    content_type: 10
+    object_id: '1'
+    object_repr: Lager
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 26
+  fields:
+    action_time: 2022-12-06 13:32:51.218350+00:00
+    user: 1
+    content_type: 10
+    object_id: '2'
+    object_repr: Pilsner
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 27
+  fields:
+    action_time: 2022-12-06 13:32:55.134379+00:00
+    user: 1
+    content_type: 10
+    object_id: '3'
+    object_repr: Stout
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 28
+  fields:
+    action_time: 2022-12-06 13:33:32.248348+00:00
+    user: 1
+    content_type: 9
+    object_id: '1'
+    object_repr: Belgian Lager
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 29
+  fields:
+    action_time: 2022-12-06 13:33:57.594874+00:00
+    user: 1
+    content_type: 9
+    object_id: '2'
+    object_repr: Weissbier
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 30
+  fields:
+    action_time: 2022-12-06 13:34:08.792100+00:00
+    user: 1
+    content_type: 9
+    object_id: '3'
+    object_repr: Irish Stout
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 31
+  fields:
+    action_time: 2022-12-06 13:34:21.307367+00:00
+    user: 1
+    content_type: 9
+    object_id: '4'
+    object_repr: Generic
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 32
+  fields:
+    action_time: 2022-12-06 13:34:29.527443+00:00
+    user: 1
+    content_type: 10
+    object_id: '4'
+    object_repr: Unknown
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 33
+  fields:
+    action_time: 2022-12-06 13:34:52.274612+00:00
+    user: 1
+    content_type: 12
+    object_id: '1'
+    object_repr: St. James's Gate Brewery
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 34
+  fields:
+    action_time: 2022-12-06 13:35:42.886566+00:00
+    user: 1
+    content_type: 12
+    object_id: '2'
+    object_repr: Asahi Biiru Kabushiki Gaisha
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 35
+  fields:
+    action_time: 2022-12-06 13:36:38.663970+00:00
+    user: 1
+    content_type: 12
+    object_id: '3'
+    object_repr: Brouwerij Affligem
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 36
+  fields:
+    action_time: 2022-12-06 13:37:46.517429+00:00
+    user: 1
+    content_type: 12
+    object_id: '4'
+    object_repr: Stella Artois Brewery
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 37
+  fields:
+    action_time: 2022-12-06 13:38:36.219156+00:00
+    user: 1
+    content_type: 12
+    object_id: '5'
+    object_repr: Brasserie Fischer (brasserie du Pêcheur)
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 38
+  fields:
+    action_time: 2022-12-06 13:39:56.320066+00:00
+    user: 1
+    content_type: 9
+    object_id: '5'
+    object_repr: Belgian Lager
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 39
+  fields:
+    action_time: 2022-12-06 13:41:16.024446+00:00
+    user: 1
+    content_type: 11
+    object_id: '1'
+    object_repr: Leffe Blond
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 40
+  fields:
+    action_time: 2022-12-06 13:47:21.479080+00:00
+    user: 1
+    content_type: 11
+    object_id: '2'
+    object_repr: Guiness Draught
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 41
+  fields:
+    action_time: 2022-12-06 13:48:04.477292+00:00
+    user: 1
+    content_type: 12
+    object_id: '6'
+    object_repr: Brouwerij Bosteels
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 42
+  fields:
+    action_time: 2022-12-06 13:48:47.822237+00:00
+    user: 1
+    content_type: 10
+    object_id: '5'
+    object_repr: Ale
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 43
+  fields:
+    action_time: 2022-12-06 13:48:58.059423+00:00
+    user: 1
+    content_type: 9
+    object_id: '6'
+    object_repr: Belgian Ale
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 44
+  fields:
+    action_time: 2022-12-06 13:50:56.427396+00:00
+    user: 1
+    content_type: 11
+    object_id: '3'
+    object_repr: Kwak
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 45
+  fields:
+    action_time: 2022-12-06 13:52:29.705634+00:00
+    user: 1
+    content_type: 9
+    object_id: '7'
+    object_repr: Japanese Rice Lager
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 46
+  fields:
+    action_time: 2022-12-06 13:53:03.426812+00:00
+    user: 1
+    content_type: 11
+    object_id: '4'
+    object_repr: Asahi Super Dry
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 47
+  fields:
+    action_time: 2022-12-06 13:54:10.605316+00:00
+    user: 1
+    content_type: 11
+    object_id: '4'
+    object_repr: Asahi Super Dry
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Ibu", "Image", "Taste"]}}]'
+- model: auth.permission
+  pk: 1
+  fields:
+    name: Can add log entry
+    content_type: 1
+    codename: add_logentry
+- model: auth.permission
+  pk: 2
+  fields:
+    name: Can change log entry
+    content_type: 1
+    codename: change_logentry
+- model: auth.permission
+  pk: 3
+  fields:
+    name: Can delete log entry
+    content_type: 1
+    codename: delete_logentry
+- model: auth.permission
+  pk: 4
+  fields:
+    name: Can view log entry
+    content_type: 1
+    codename: view_logentry
+- model: auth.permission
+  pk: 5
+  fields:
+    name: Can add permission
+    content_type: 2
+    codename: add_permission
+- model: auth.permission
+  pk: 6
+  fields:
+    name: Can change permission
+    content_type: 2
+    codename: change_permission
+- model: auth.permission
+  pk: 7
+  fields:
+    name: Can delete permission
+    content_type: 2
+    codename: delete_permission
+- model: auth.permission
+  pk: 8
+  fields:
+    name: Can view permission
+    content_type: 2
+    codename: view_permission
+- model: auth.permission
+  pk: 9
+  fields:
+    name: Can add group
+    content_type: 3
+    codename: add_group
+- model: auth.permission
+  pk: 10
+  fields:
+    name: Can change group
+    content_type: 3
+    codename: change_group
+- model: auth.permission
+  pk: 11
+  fields:
+    name: Can delete group
+    content_type: 3
+    codename: delete_group
+- model: auth.permission
+  pk: 12
+  fields:
+    name: Can view group
+    content_type: 3
+    codename: view_group
+- model: auth.permission
+  pk: 13
+  fields:
+    name: Can add user
+    content_type: 4
+    codename: add_user
+- model: auth.permission
+  pk: 14
+  fields:
+    name: Can change user
+    content_type: 4
+    codename: change_user
+- model: auth.permission
+  pk: 15
+  fields:
+    name: Can delete user
+    content_type: 4
+    codename: delete_user
+- model: auth.permission
+  pk: 16
+  fields:
+    name: Can view user
+    content_type: 4
+    codename: view_user
+- model: auth.permission
+  pk: 17
+  fields:
+    name: Can add content type
+    content_type: 5
+    codename: add_contenttype
+- model: auth.permission
+  pk: 18
+  fields:
+    name: Can change content type
+    content_type: 5
+    codename: change_contenttype
+- model: auth.permission
+  pk: 19
+  fields:
+    name: Can delete content type
+    content_type: 5
+    codename: delete_contenttype
+- model: auth.permission
+  pk: 20
+  fields:
+    name: Can view content type
+    content_type: 5
+    codename: view_contenttype
+- model: auth.permission
+  pk: 21
+  fields:
+    name: Can add session
+    content_type: 6
+    codename: add_session
+- model: auth.permission
+  pk: 22
+  fields:
+    name: Can change session
+    content_type: 6
+    codename: change_session
+- model: auth.permission
+  pk: 23
+  fields:
+    name: Can delete session
+    content_type: 6
+    codename: delete_session
+- model: auth.permission
+  pk: 24
+  fields:
+    name: Can view session
+    content_type: 6
+    codename: view_session
+- model: auth.permission
+  pk: 25
+  fields:
+    name: Can add glass
+    content_type: 7
+    codename: add_glass
+- model: auth.permission
+  pk: 26
+  fields:
+    name: Can change glass
+    content_type: 7
+    codename: change_glass
+- model: auth.permission
+  pk: 27
+  fields:
+    name: Can delete glass
+    content_type: 7
+    codename: delete_glass
+- model: auth.permission
+  pk: 28
+  fields:
+    name: Can view glass
+    content_type: 7
+    codename: view_glass
+- model: auth.permission
+  pk: 29
+  fields:
+    name: Can add country
+    content_type: 8
+    codename: add_country
+- model: auth.permission
+  pk: 30
+  fields:
+    name: Can change country
+    content_type: 8
+    codename: change_country
+- model: auth.permission
+  pk: 31
+  fields:
+    name: Can delete country
+    content_type: 8
+    codename: delete_country
+- model: auth.permission
+  pk: 32
+  fields:
+    name: Can view country
+    content_type: 8
+    codename: view_country
+- model: auth.permission
+  pk: 33
+  fields:
+    name: Can add style
+    content_type: 9
+    codename: add_style
+- model: auth.permission
+  pk: 34
+  fields:
+    name: Can change style
+    content_type: 9
+    codename: change_style
+- model: auth.permission
+  pk: 35
+  fields:
+    name: Can delete style
+    content_type: 9
+    codename: delete_style
+- model: auth.permission
+  pk: 36
+  fields:
+    name: Can view style
+    content_type: 9
+    codename: view_style
+- model: auth.permission
+  pk: 37
+  fields:
+    name: Can add type
+    content_type: 10
+    codename: add_type
+- model: auth.permission
+  pk: 38
+  fields:
+    name: Can change type
+    content_type: 10
+    codename: change_type
+- model: auth.permission
+  pk: 39
+  fields:
+    name: Can delete type
+    content_type: 10
+    codename: delete_type
+- model: auth.permission
+  pk: 40
+  fields:
+    name: Can view type
+    content_type: 10
+    codename: view_type
+- model: auth.permission
+  pk: 41
+  fields:
+    name: Can add beer
+    content_type: 11
+    codename: add_beer
+- model: auth.permission
+  pk: 42
+  fields:
+    name: Can change beer
+    content_type: 11
+    codename: change_beer
+- model: auth.permission
+  pk: 43
+  fields:
+    name: Can delete beer
+    content_type: 11
+    codename: delete_beer
+- model: auth.permission
+  pk: 44
+  fields:
+    name: Can view beer
+    content_type: 11
+    codename: view_beer
+- model: auth.permission
+  pk: 45
+  fields:
+    name: Can add brewery
+    content_type: 12
+    codename: add_brewery
+- model: auth.permission
+  pk: 46
+  fields:
+    name: Can change brewery
+    content_type: 12
+    codename: change_brewery
+- model: auth.permission
+  pk: 47
+  fields:
+    name: Can delete brewery
+    content_type: 12
+    codename: delete_brewery
+- model: auth.permission
+  pk: 48
+  fields:
+    name: Can view brewery
+    content_type: 12
+    codename: view_brewery
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$390000$rWENnBy9BwqzUYRfIY2b2E$ZU+hiuZdfTa2VMwB9T9pi8QcfXO0oRBJF/6oNX5qW3c=
+    last_login: 2022-12-06 13:25:24.403022+00:00
+    is_superuser: true
+    username: theo
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2022-12-06 13:25:12.385378+00:00
+    groups: []
+    user_permissions: []
+- model: auth.user
+  pk: 2
+  fields:
+    password: pbkdf2_sha256$390000$XSC31WeCfIm9eetOugrODW$6YBBTRdkBgwesXKuGBL4xUQN1BUai6pAwIt3SwkRkHs=
+    last_login: null
+    is_superuser: true
+    username: admin
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2022-12-06 14:01:12.262897+00:00
+    groups: []
+    user_permissions: []
+- model: contenttypes.contenttype
+  pk: 1
+  fields:
+    app_label: admin
+    model: logentry
+- model: contenttypes.contenttype
+  pk: 2
+  fields:
+    app_label: auth
+    model: permission
+- model: contenttypes.contenttype
+  pk: 3
+  fields:
+    app_label: auth
+    model: group
+- model: contenttypes.contenttype
+  pk: 4
+  fields:
+    app_label: auth
+    model: user
+- model: contenttypes.contenttype
+  pk: 5
+  fields:
+    app_label: contenttypes
+    model: contenttype
+- model: contenttypes.contenttype
+  pk: 6
+  fields:
+    app_label: sessions
+    model: session
+- model: contenttypes.contenttype
+  pk: 7
+  fields:
+    app_label: Gueze
+    model: glass
+- model: contenttypes.contenttype
+  pk: 8
+  fields:
+    app_label: Gueze
+    model: country
+- model: contenttypes.contenttype
+  pk: 9
+  fields:
+    app_label: Gueze
+    model: style
+- model: contenttypes.contenttype
+  pk: 10
+  fields:
+    app_label: Gueze
+    model: type
+- model: contenttypes.contenttype
+  pk: 11
+  fields:
+    app_label: Gueze
+    model: beer
+- model: contenttypes.contenttype
+  pk: 12
+  fields:
+    app_label: Gueze
+    model: brewery
+- model: sessions.session
+  pk: 8l0uvdnunmlm31e69xeucg1dv72mwydx
+  fields:
+    session_data: .eJxVjEEOwiAQRe_C2hCGtjC4dO8ZyMAMUjVtUtqV8e7apAvd_vfef6lI21rj1mSJI6uzAnX63RLlh0w74DtNt1nneVqXMeld0Qdt-jqzPC-H-3dQqdVvHYq1HnsKnQkGChYUTJbLIGgByRXXGeCBqQffBQHxiACeHSRLkFG9P8deNyI:1p2Xwq:33Xcvp5qVGFzPyHzw1pocFBhxfL-VyAEkmqwNbGPvS8
+    expire_date: 2022-12-20 13:25:24.558318+00:00
+- model: Gueze.glass
+  pk: 1
+  fields:
+    name: koetsiersglas
+- model: Gueze.glass
+  pk: 2
+  fields:
+    name: Goblet
+- model: Gueze.glass
+  pk: 3
+  fields:
+    name: Ipa
+- model: Gueze.glass
+  pk: 4
+  fields:
+    name: Wooden Mug
+- model: Gueze.glass
+  pk: 5
+  fields:
+    name: Stein Mug
+- model: Gueze.glass
+  pk: 6
+  fields:
+    name: Glass Mug
+- model: Gueze.glass
+  pk: 7
+  fields:
+    name: Flute
+- model: Gueze.glass
+  pk: 8
+  fields:
+    name: Snifter
+- model: Gueze.glass
+  pk: 9
+  fields:
+    name: Shaker Pint
+- model: Gueze.glass
+  pk: 10
+  fields:
+    name: Stange
+- model: Gueze.glass
+  pk: 11
+  fields:
+    name: Thistle
+- model: Gueze.glass
+  pk: 12
+  fields:
+    name: Pilsner
+- model: Gueze.glass
+  pk: 13
+  fields:
+    name: Nonic Pint
+- model: Gueze.glass
+  pk: 14
+  fields:
+    name: Weizen
+- model: Gueze.glass
+  pk: 15
+  fields:
+    name: Tulip
+- model: Gueze.glass
+  pk: 16
+  fields:
+    name: Boot
+- model: Gueze.glass
+  pk: 17
+  fields:
+    name: Tulip Pint
+- model: Gueze.glass
+  pk: 18
+  fields:
+    name: Glass
+- model: Gueze.country
+  pk: 1
+  fields:
+    name: France
+- model: Gueze.country
+  pk: 2
+  fields:
+    name: Belgium
+- model: Gueze.country
+  pk: 3
+  fields:
+    name: United States of America
+- model: Gueze.country
+  pk: 4
+  fields:
+    name: Japan
+- model: Gueze.country
+  pk: 5
+  fields:
+    name: Czech Republic
+- model: Gueze.country
+  pk: 6
+  fields:
+    name: Ireland
+- model: Gueze.style
+  pk: 1
+  fields:
+    name: Belgian Lager
+- model: Gueze.style
+  pk: 2
+  fields:
+    name: Weissbier
+- model: Gueze.style
+  pk: 3
+  fields:
+    name: Irish Stout
+- model: Gueze.style
+  pk: 4
+  fields:
+    name: Generic
+- model: Gueze.style
+  pk: 5
+  fields:
+    name: Belgian Lager
+- model: Gueze.style
+  pk: 6
+  fields:
+    name: Belgian Ale
+- model: Gueze.style
+  pk: 7
+  fields:
+    name: Japanese Rice Lager
+- model: Gueze.type
+  pk: 1
+  fields:
+    name: Lager
+- model: Gueze.type
+  pk: 2
+  fields:
+    name: Pilsner
+- model: Gueze.type
+  pk: 3
+  fields:
+    name: Stout
+- model: Gueze.type
+  pk: 4
+  fields:
+    name: Unknown
+- model: Gueze.type
+  pk: 5
+  fields:
+    name: Ale
+- model: Gueze.beer
+  pk: 1
+  fields:
+    name: Leffe Blond
+    srm: EBBB40
+    abv: 6.6
+    ibu: 25.0
+    image: https://d33za54wpumlhy.cloudfront.net/eyJidWNrZXQiOiJzYXZldXJiaWVyZSIsImtleSI6ImltZy9wLzEzMDQtNjI0MTcuanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo4MH0sInBuZyI6eyJxdWFsaXR5Ijo4MH0sInJlc2l6ZSI6eyJ3aWR0aCI6NTg1LCJoZWlnaHQiOjQwMiwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MCwiZyI6MCwiYiI6MCwiYWxwaGEiOjB9fX19
+    brewery: 4
+    glass: 15
+    type: 1
+    style: 5
+    taste: Arômes maltés puissants de céréales et de maïs ainsi que des senteurs de
+      banane et de clou de girofle.
+    countries_sold_in:
+    - 1
+    - 2
+- model: Gueze.beer
+  pk: 2
+  fields:
+    name: Guiness Draught
+    srm: 1d1002
+    abv: 4.2
+    ibu: 40.0
+    image: https://d33za54wpumlhy.cloudfront.net/eyJidWNrZXQiOiJzYXZldXJiaWVyZSIsImtleSI6ImltZy9wLzk2Ny0xNTk4MC5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjgwfSwicG5nIjp7InF1YWxpdHkiOjgwfSwicmVzaXplIjp7IndpZHRoIjo1ODUsImhlaWdodCI6NDAyLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjowLCJnIjowLCJiIjowLCJhbHBoYSI6MH19fX0=
+    brewery: 1
+    glass: 17
+    type: 3
+    style: 3
+    taste: Guinness, accompagnée comme à l'habitude de son inimitable chapeau de mousse
+      beige et compact. De cet ensemble se dégagent des arômes doux et torréfiés de
+      malt évoquant le cacao, le café, les fruits secs et les grains grillés. On retrouve
+      en bouche des saveurs similaires à celles perçues dans le nez, avec une douceur
+      sucrée qui s'équilibre avec les saveurs prononcées de torréfaction. Goûter cette
+      Guinness, c'est faire le choix d'une des meilleures Stouts d'Irlande !
+    countries_sold_in:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+- model: Gueze.beer
+  pk: 3
+  fields:
+    name: Kwak
+    srm: EBBB40
+    abv: 8.4
+    ibu: 50.0
+    image: https://d33za54wpumlhy.cloudfront.net/eyJidWNrZXQiOiJzYXZldXJiaWVyZSIsImtleSI6ImltZy9wLzEwNC02MjkzMi5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjgwfSwicG5nIjp7InF1YWxpdHkiOjgwfSwicmVzaXplIjp7IndpZHRoIjo1ODUsImhlaWdodCI6NDAyLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjowLCJnIjowLCJiIjowLCJhbHBoYSI6MH19fX0=
+    brewery: 6
+    glass: 1
+    type: 5
+    style: 6
+    taste: Avec un bel équilibre doux et amer dans un corps lisse et puissant, la
+      Kwak offre de délicieuses saveurs d'abricot, de malt et de prune, associées
+      à la banane, la réglisse et la pomme verte. L'expérience de dégustation se termine
+      par une finale épicée et sucrée.
+    countries_sold_in:
+    - 1
+    - 2
+    - 6
+- model: Gueze.beer
+  pk: 4
+  fields:
+    name: Asahi Super Dry
+    srm: EBBB40
+    abv: 5.0
+    ibu: 20.0
+    image: https://produits.bienmanger.com/2264-0w470h470_Asahi_Biere_Japon.jpg
+    brewery: 2
+    glass: 6
+    type: 1
+    style: 7
+    taste: Côté gustatif, la bière Asahi est douce et faible en amertume. Elle présente
+      beaucoup d'arômes différents. Asahi est obtenue grâce à une levure rare et exclusive,
+      qui non seulement développe une fermentation exceptionnelle, mais produit un
+      arôme malté complexe dans une saveur élégante et sophistiquée.
+    countries_sold_in:
+    - 1
+    - 3
+    - 4
+- model: Gueze.brewery
+  pk: 1
+  fields:
+    name: St. James's Gate Brewery
+    country: 6
+    beers: []
+- model: Gueze.brewery
+  pk: 2
+  fields:
+    name: Asahi Biiru Kabushiki Gaisha
+    country: 4
+    beers: []
+- model: Gueze.brewery
+  pk: 3
+  fields:
+    name: Brouwerij Affligem
+    country: 2
+    beers: []
+- model: Gueze.brewery
+  pk: 4
+  fields:
+    name: Stella Artois Brewery
+    country: 2
+    beers: []
+- model: Gueze.brewery
+  pk: 5
+  fields:
+    name: Brasserie Fischer (brasserie du Pêcheur)
+    country: 1
+    beers: []
+- model: Gueze.brewery
+  pk: 6
+  fields:
+    name: Brouwerij Bosteels
+    country: 2
+    beers: []
