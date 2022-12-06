@@ -8,15 +8,27 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "packages/djangolic-e2e/cypress.config.ts",
-        "baseUrl": "127.0.0.1:8000",
+        "baseUrl": "http://127.0.0.1:8000",
         "testingType": "e2e"
+      }
+    },
+
+    "gui": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/djangolic-e2e",
+        "commands": [
+          {
+            "command": "npx cypress open"
+          }
+        ]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/djangolic-e2e/**/*.js"]
+        "lintFilePatterns": ["packages/djangolic-e2e/**/*.{js,ts}"]
       }
     }
   },
