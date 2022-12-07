@@ -1,16 +1,16 @@
 from django import forms
-from django.forms import ModelForm
 from .models import Beer, Glass, Country, Style, Type, Brewery
 #! TODO : Try to add tailwind classes to forms
 # beer
 
-class BeerSearchForm(forms.models.ModelForm):
+class BeerSearchForm(forms.ModelForm):
     class Meta:
         model = Beer
-        fields = ('name','ibu','abv','glass','type','style','countries_sold_in','srm')
+        fields = ('name', 'ibu', 'abv', 'glass', 'type', 'style', 'countries_sold_in', 'brewery')
 
+        
 
-class BeerCreateForm(ModelForm):
+class BeerCreateForm(forms.Form):
     class Meta:
         model = Beer
         fields = ('name', 'ibu', 'abv', 'glass', 'type', 'style', 'countries_sold_in', 'taste', 'image', 'srm')
@@ -34,7 +34,7 @@ class BeerCreateForm(ModelForm):
 
 # brewery
 
-class BreweryCreateForm(ModelForm):
+class BreweryCreateForm(forms.Form):
     class Meta:
         model = Brewery
         fields = ('name','country','beers')
@@ -44,7 +44,7 @@ class BreweryCreateForm(ModelForm):
         beers = forms.CharField()
 
 
-class BrewerySearchForm(ModelForm):
+class BrewerySearchForm(forms.Form):
     class Meta:
         model = Brewery
         fields = ('name','country')
@@ -52,13 +52,13 @@ class BrewerySearchForm(ModelForm):
 
 
 # country
-class CountryCreateForm(ModelForm):
+class CountryCreateForm(forms.Form):
     class Meta:
         model = Country
         fields = ('name',)
         country = forms.CharField()
 
-class CountrySearchForm(ModelForm):
+class CountrySearchForm(forms.Form):
     class Meta:
         model = Country
         fields = ('name',)
