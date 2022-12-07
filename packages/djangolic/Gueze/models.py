@@ -59,9 +59,14 @@ class Beer(models.Model):
     countries_sold_in = models.ManyToManyField(Country,related_name='countries_sold+',blank=True)
 
     def get_srm(self):
+        if(self.srm == None):
+            return "Unknown"
         return "#" + self.srm
     
+    
     def get_taste_short(self):
+        if(self.taste == None):
+            return "Unknown"
         return self.taste[:100] + "..."
         
 
@@ -76,6 +81,10 @@ class Brewery(models.Model):
         return self.name
     def __str__(self):
         return self.name
+    
+    def get_country(self):
+        return self.country
+    
     
     class Meta:
         verbose_name_plural = "Breweries"

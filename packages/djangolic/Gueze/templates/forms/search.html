@@ -16,7 +16,7 @@
       </p>
 
 
-	  <form  method="POST" action="{% url 'search-results' %}" class="flex flex-col mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
+	  <form  method="GET" action="{% url 'search-results' %}" class="flex flex-col mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
         {% csrf_token %}
         
 		{{ BeerSearchForm }}
@@ -26,7 +26,7 @@
     -->
         <button
           type="submit"
-          class="block  w-full rounded-lg bg-amber-400 px-5 py-3 text-sm font-medium text-gray-400"
+          class="block  w-full rounded-lg bg-amber-600 px-5 py-3 text-sm font-medium text-white "
         >
           Search🍺
         </button>

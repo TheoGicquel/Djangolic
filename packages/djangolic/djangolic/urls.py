@@ -25,10 +25,10 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path('beers/', include('Gueze.urls')),
     
-    path('beers/<int:beer_id>/', views.beerview, name="beerview"),
+    path('beer/<int:beer_id>/', views.beerview, name="beerview"),
     path('index', views.index , name='index'),
     path('', views.index , name='index'),
-    path('search', views.search_form , name='search'),
+    path('search', views.search_form_beer , name='search'),
     path('search/results/', views.search_results , name='search-results'),
     path('search/results/all/', views.search_results_all , name='search-results-all'),
 
@@ -37,7 +37,7 @@ urlpatterns = [
     path('update', views.update , name='update'),
     path('about', views.about , name='about'),
     path('beer',views.beerview,name="beerview"),
-    path('beer/',views.beerview,name="beerview"),
+    path('beer/<int:id>/view', views.beerview, name="beerview"),
     path('beer/<int:id>/', views.beerview, name="beerview"),
     path('beer/all/', views.beerview_all, name="beerview"),
     path('random/',views.random_beer,name="random_beer")
