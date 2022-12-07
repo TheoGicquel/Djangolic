@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Beer,Style,Type,Glass,Country,Brewery
-from .forms import BeerSearchForm, CountrySearchForm, BrewerySearchForm,CountryCreateForm
+from .forms import BeerSearchForm, CountrySearchForm, BrewerySearchForm,CountryCreateForm,BeerCreateForm
 from django.shortcuts import redirect
 import random
 from django.db.models import Q, Count
@@ -95,7 +95,15 @@ def search_form_beer(request):
     
     return render(request, "forms/search.html",context)
 
-def create(request):
+def create_beer_form(request):
+    context = {
+        "BeerCreateForm": BeerCreateForm
+    }
+    
+    return render(request, "forms/create.html",context)
+
+
+def create_results(request):
     form_country = CountryCreateForm
     
     return render(request, "forms/create.html")
