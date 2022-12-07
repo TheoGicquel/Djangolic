@@ -95,7 +95,8 @@ def update(request):
 def delete(request, beer_id):
     beer = Beer.objects.get(id=beer_id)
     beer.delete()
-    return render(request, "forms/delete.html")
+    #render(request, "forms/{id}/delete.html")
+    return redirect("andom_beer",id=beer_id)
 
 def view(request, beer_id):
     return render(request, "beer/beer-view.html")   
