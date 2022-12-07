@@ -16,7 +16,7 @@
       </p>
 
 
-	  <form  method="GET" action="{% url 'create_results' %}" class="flex flex-col mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
+	  <form  method="POST" action="{% url 'create_results' %}" class="flex flex-col mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
         {% csrf_token %}
         
 		{{ BeerCreateForm }}

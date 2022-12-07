@@ -34,7 +34,7 @@ urlpatterns = [
 
 
     path('create', views.create_beer_form , name='create'),
-    path('create/results/', views.create_beer_form , name='create_results'),
+    path('create/results', views.create_beer_results , name='create_results'),
     
     path('update', views.update , name='update'),
     path('about', views.about , name='about'),

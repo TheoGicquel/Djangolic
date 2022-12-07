@@ -70,6 +70,7 @@ def search_results_all(request):
 
 
 def search_results(request):
+    print('--------- search_results  -----------')
 
     if(request.method == "GET"):
         qs = filter(request)
@@ -87,7 +88,8 @@ def search_results(request):
 
 
 def search_form_beer(request):
-    
+    print('--------- search_form_beer -----------')
+    print("into form")
     context = {
         "BeerSearchForm": BeerSearchForm
     }
@@ -95,7 +97,14 @@ def search_form_beer(request):
     
     return render(request, "forms/search.html",context)
 
+
+
+
+
+
+
 def create_beer_form(request):
+    print('--------- create_beer_form -----------')
     context = {
         "BeerCreateForm": BeerCreateForm
     }
@@ -103,10 +112,25 @@ def create_beer_form(request):
     return render(request, "forms/create.html",context)
 
 
-def create_results(request):
-    form_country = CountryCreateForm
+def create_beer_results(request):
+    print('--------- create_beer_results -----------')
+    print(request)
+    print('--------- /post -----------')
     
-    return render(request, "forms/create.html")
+    if(request.method == "POST"):
+        form = BeerCreateForm(request.POST)
+        if form.is_valid():
+            id = form.instance.id
+            print("--------- form -----------")
+            print(form.clean)
+            print("--------- form/ -----------")
+            
+            form.save()
+            return redirect("beerview",id=id)
+        else:
+            return render(request, "forms/create.html",{"form":form})        
+    
+    return render(request, "error.html")
 
 def update(request):
     return render(request, "forms/update.html")
