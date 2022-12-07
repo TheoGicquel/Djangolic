@@ -51,18 +51,22 @@ class Beer(models.Model):
     abv= models.FloatField(blank=True,null=True)
     ibu= models.FloatField(blank=True,null=True)
     image = models.CharField(max_length=2048,blank=True,null=True)
-    brewery = models.ForeignKey('Brewery',related_name="beer-brewery+",on_delete=models.DO_NOTHING)
+    brewery = models.ForeignKey('Brewery',related_name="beer-brewery+",on_delete=models.DO_NOTHING,blank=True,null=True)
     glass=models.ForeignKey(Glass,blank=True,on_delete=models.CASCADE,related_name='glass+',null=True)
     type = models.ForeignKey(Type, on_delete=models.CASCADE,blank=True,null=True)
     style = models.ForeignKey(Style, on_delete=models.CASCADE,blank=True,null=True)
     taste = models.CharField(max_length=1500,blank=True,null=True)
-    countries_sold_in = models.ManyToManyField(Country,related_name='countries_sold+')
-      
+    countries_sold_in = models.ManyToManyField(Country,related_name='countries_sold+',blank=True)
 
     def get_srm(self):
+        if(self.srm == None):
+            return "Unknown"
         return "#" + self.srm
     
+    
     def get_taste_short(self):
+        if(self.taste == None):
+            return "Unknown"
         return self.taste[:100] + "..."
         
 
@@ -77,6 +81,10 @@ class Brewery(models.Model):
         return self.name
     def __str__(self):
         return self.name
+    
+    def get_country(self):
+        return self.country
+    
     
     class Meta:
         verbose_name_plural = "Breweries"
