@@ -114,23 +114,19 @@ def create_beer_form(request):
 
 def create_beer_results(request):
     print('--------- create_beer_results -----------')
-    print(request)
-    print('--------- /post -----------')
+    print(request.POST)
+    # add beer to database
     
-    if(request.method == "POST"):
+    if request.method == "POST":
         form = BeerCreateForm(request.POST)
         if form.is_valid():
-            id = form.instance.id
-            print("--------- form -----------")
-            print(form.clean)
-            print("--------- form/ -----------")
-            
             form.save()
-            return redirect("beerview",id=id)
-        else:
-            return render(request, "forms/create.html",{"form":form})        
+            beerpage = "/beer/" + str(Beer.objects.latest('id').id) + "/view"
+            return redirect(beerpage)
+    else:
+        form = BeerCreateForm()
+    return render(request, "forms/create.html", {"form": form})
     
-    return render(request, "error.html")
 
 def update(request):
     return render(request, "forms/update.html")
@@ -140,8 +136,7 @@ def delete(request, beer_id):
     beer.delete()
     return render(request, "forms/delete.html")
 
-def view(request, beer_id):
-    return render(request, "beer/beer-view.html")   
+
 
 def random_beer(request):
     beers = list(Beer.objects.all())

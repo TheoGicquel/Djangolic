@@ -17,32 +17,7 @@
 			</div>
 			<div class="lg:sticky lg:top-0">
 			  <form class="space-y-4 lg:pt-8">
-				{% comment %}
-				<fieldset>
-				  <legend class="text-lg font-bold">Color</legend>
-				  <div class="mt-2 flex gap-1">
-					<label for="color_green" class="cursor-pointer">
-					  <input type="radio" id="color_green" name="color" class="peer sr-only" checked />
-					  <span class="block h-6 w-6 rounded-full border border-gray-200 bg-green-700 ring-1 ring-transparent ring-offset-1 peer-checked:ring-gray-300"></span>
-					</label>
-					<label for="color_blue" class="cursor-pointer">
-					  <input type="radio" id="color_blue" name="color" class="peer sr-only" />
-					  <span class="block h-6 w-6 rounded-full border border-gray-200 bg-blue-700 ring-1 ring-transparent ring-offset-1 peer-checked:ring-gray-300"></span>
-					</label>
-					<label for="color_pink" class="cursor-pointer">
-					  <input type="radio" id="color_pink" name="color" class="peer sr-only" />
-					  <span class="block h-6 w-6 rounded-full border border-gray-200 bg-pink-700 ring-1 ring-transparent ring-offset-1 peer-checked:ring-gray-300"></span>
-					</label>
-					<label for="color_red" class="cursor-pointer">
-					  <input type="radio" id="color_red" name="color" class="peer sr-only" />
-					  <span class="block h-6 w-6 rounded-full border border-gray-200 bg-red-700 ring-1 ring-transparent ring-offset-1 peer-checked:ring-gray-300"></span>
-					</label>
-					<label for="color_indigo" class="cursor-pointer">
-					  <input type="radio" id="color_indigo" name="color" class="peer sr-only" />
-					  <span class="block h-6 w-6 rounded-full border border-gray-200 bg-indigo-700 ring-1 ring-transparent ring-offset-1 peer-checked:ring-gray-300"></span>
-					</label>
-				  </div>
-				</fieldset>{% endcomment %}
+				
 				  <h3 class="text-lg font-bold">Style/taste</h3>
 				  <div class="mt-2 flex gap-1">
 					<p>{{beer.style}}</p>
@@ -66,12 +41,15 @@
 			</div>
 			<div class="lg:col-span-3">
 			  <div class="prose max-w-none [&>iframe]:mt-6 [&>iframe]:aspect-video [&>iframe]:w-full [&>iframe]:rounded-xl">
-				<h2>Features</h2>
+				<h2>Sold in :</h2>
 				<div class="flex">
+				
 				<ul>
-					<li>{{beer.countries_sold_in}}</li>
+					{% for country in beer.get_countries %}
+					<li>{{country}}</li>
+					{% endfor %}
 				</ul>
-
+				
 
 				</div>
 			  
