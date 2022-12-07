@@ -47,7 +47,7 @@ class Type(models.Model):
 
 class Beer(models.Model):
     name = models.CharField(max_length=100,blank=True,null=True)
-    srm= models.CharField(max_length=8,blank=True,default="EBBB40")
+    srm= models.CharField(max_length=8,blank=True,default="EBBB40",null=True)
     abv= models.FloatField(blank=True,null=True)
     ibu= models.FloatField(blank=True,null=True)
     image = models.CharField(max_length=2048,blank=True,null=True)
@@ -57,6 +57,12 @@ class Beer(models.Model):
     style = models.ForeignKey(Style, on_delete=models.CASCADE,blank=True,null=True)
     taste = models.CharField(max_length=1500,blank=True,null=True)
     countries_sold_in = models.ManyToManyField(Country,related_name='countries_sold+',blank=True)
+
+    def get_countries(self):
+        if(self.countries_sold_in.count() == 0):
+            return ["Unknown"]
+        
+        return self.countries_sold_in.all()
 
     def get_srm(self):
         if(self.srm == None):
@@ -74,9 +80,9 @@ class Beer(models.Model):
         return self.name
 
 class Brewery(models.Model):
-    name = models.CharField(max_length=50,blank=True,unique=True)
+    name = models.CharField(max_length=50,blank=True,unique=True,null=True)
     country = models.ForeignKey(Country, on_delete=models.CASCADE,blank=True,null=True)
-    beers = models.ManyToManyField(Beer,related_name="brewery-beers+",blank=True)
+    beers = models.ManyToManyField(Beer,related_name="brewery-beers+",blank=True,null=True)
     def __unicode__(self):
         return self.name
     def __str__(self):

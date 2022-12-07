@@ -33,7 +33,9 @@ urlpatterns = [
     path('search/results/all/', views.search_results_all , name='search-results-all'),
 
 
-    path('create', views.create , name='create'),
+    path('create', views.create_beer_form , name='create'),
+    path('create/results', views.create_beer_results , name='create_results'),
+    
     path('update', views.update , name='update'),
     path('about', views.about , name='about'),
     path('beer',views.beerview,name="beerview"),

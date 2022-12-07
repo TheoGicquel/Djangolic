@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Beer,Style,Type,Glass,Country,Brewery
-from .forms import BeerSearchForm, CountrySearchForm, BrewerySearchForm,CountryCreateForm
+from .forms import BeerSearchForm, CountrySearchForm, BrewerySearchForm,CountryCreateForm,BeerCreateForm
 from django.shortcuts import redirect
 import random
 from django.db.models import Q, Count
@@ -70,6 +70,7 @@ def search_results_all(request):
 
 
 def search_results(request):
+    print('--------- search_results  -----------')
 
     if(request.method == "GET"):
         qs = filter(request)
@@ -87,7 +88,8 @@ def search_results(request):
 
 
 def search_form_beer(request):
-    
+    print('--------- search_form_beer -----------')
+    print("into form")
     context = {
         "BeerSearchForm": BeerSearchForm
     }
@@ -95,10 +97,36 @@ def search_form_beer(request):
     
     return render(request, "forms/search.html",context)
 
-def create(request):
-    form_country = CountryCreateForm
+
+
+
+
+
+
+def create_beer_form(request):
+    print('--------- create_beer_form -----------')
+    context = {
+        "BeerCreateForm": BeerCreateForm
+    }
     
-    return render(request, "forms/create.html")
+    return render(request, "forms/create.html",context)
+
+
+def create_beer_results(request):
+    print('--------- create_beer_results -----------')
+    print(request.POST)
+    # add beer to database
+    
+    if request.method == "POST":
+        form = BeerCreateForm(request.POST)
+        if form.is_valid():
+            form.save()
+            beerpage = "/beer/" + str(Beer.objects.latest('id').id) + "/view"
+            return redirect(beerpage)
+    else:
+        form = BeerCreateForm()
+    return render(request, "forms/create.html", {"form": form})
+    
 
 def update(request):
     return render(request, "forms/update.html")
@@ -108,8 +136,7 @@ def delete(request, beer_id):
     beer.delete()
     return render(request, "forms/delete.html")
 
-def view(request, beer_id):
-    return render(request, "beer/beer-view.html")   
+
 
 def random_beer(request):
     beers = list(Beer.objects.all())
