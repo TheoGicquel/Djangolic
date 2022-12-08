@@ -13,6 +13,13 @@ class BeerCreateForm(forms.ModelForm):
         model = Beer
         fields = ('name', 'ibu', 'abv', 'glass', 'type', 'style', 'countries_sold_in', 'brewery', 'taste', 'image', 'srm')
 
+class BeerUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Beer
+        fields = ('id', 'name', 'ibu', 'abv', 'glass', 'type', 'style', 'countries_sold_in', 'brewery', 'taste', 'image', 'srm')
+
+
+
 # brewery
 
 class BreweryCreateForm(forms.Form):

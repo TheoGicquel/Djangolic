@@ -6,26 +6,24 @@
   <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-lg">
       <h1 class="text-center text-2xl font-bold text-amber-600 sm:text-3xl">
-        Search for a beer
+        Create Beer
       </h1>
 
       <p class="mx-auto mt-4 max-w-md text-center text-gray-500">
-        Please select at least one of the following
+        Edit Beer
         <span class="font-semibold text-amber-700">criterias</span> and we'll
-        try to find a beer that matches your preferences.
+        try to find a beer that matches your preferences. 
       </p>
 
 
-	  <form  method="POST" action="{% url 'search-results' %}" class="mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
+	  <form  method="POST" action="/beer/{{beer.id}}/edit-results" class="flex flex-col mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
         {% csrf_token %}
         
-		{{ beer_form|crispy }}
-    <h3 class="font-bold mt-10 text-xl">Search by brewery</h3>
-		{{ brewery_form|crispy }}
+		{{ BeerUpdateForm }}
 
         <button
           type="submit"
-          class="block  w-full rounded-lg bg-amber-400 px-5 py-3 text-sm font-medium text-gray-400"
+          class="block  w-full rounded-lg bg-amber-600 px-5 py-3 text-sm font-medium text-white "
         >
           Search🍺
         </button>

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Beer,Style,Type,Glass,Country,Brewery
-from .forms import BeerSearchForm, CountrySearchForm, BrewerySearchForm,CountryCreateForm,BeerCreateForm
+from .forms import BeerSearchForm, CountrySearchForm, BrewerySearchForm,CountryCreateForm,BeerCreateForm,BeerUpdateForm
 from django.shortcuts import redirect
 import random
 from django.db.models import Q, Count
@@ -98,8 +98,30 @@ def search_form_beer(request):
     return render(request, "forms/search.html",context)
 
 
+def edit_beer_form(request,beer_id):
+    print('--------- edit_beer_form -----------')
+    beer = Beer.objects.get(id=beer_id)
+    context = {
+        "BeerUpdateForm": BeerUpdateForm(instance=beer),
+        "beer":beer,
+        
+    }
+    
+    return render(request, "forms/update.html",context)
 
-
+def edit_beer_result(request,beer_id):
+    # edit beer in database
+    if request.method == "POST":
+        beer = Beer.objects.get(id=beer_id)
+        
+        form = BeerUpdateForm(request.POST,instance=beer)
+        if form.is_valid():
+            form.save()
+            beerpage = "/beer/" + str(beer.id) + "/view"
+            return redirect(beerpage)
+    else:
+        form = BeerUpdateForm(instance=beer)
+    return render(request, "forms/update.html", {"form": form})
 
 
 

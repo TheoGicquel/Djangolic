@@ -35,10 +35,15 @@ urlpatterns = [
 
     path('create', views.create_beer_form , name='create'),
     path('create/results', views.create_beer_results , name='create_results'),
+    path('edit/results', views.edit_beer_result , name='edit_beer_result'),
+
     
     path('update', views.update , name='update'),
     path('about', views.about , name='about'),
     path('beer',views.beerview,name="beerview"),
+    path('beer/<int:beer_id>/edit', views.edit_beer_form, name="edit_beer_form"),
+    path('beer/<int:beer_id>/edit-results', views.edit_beer_result, name="edit_beer_result"),
+
     path('beer/<int:beer_id>/delete', views.beerdelete, name="beerdelete"),
     path('beer/<int:id>/view', views.beerview, name="beerview"),
     path('beer/<int:id>/', views.beerview, name="beerview"),
