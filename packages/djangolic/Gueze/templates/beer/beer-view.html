@@ -18,9 +18,21 @@
 			<div class="lg:sticky lg:top-0">
 			  <form class="space-y-4 lg:pt-8">
 				
+					<h3 class="text-lg font-bold">Name</h3>
+					<p>{{beer.name}}</p>
+
+					<h3 class="text-lg font-bold">ABV</h3>
+					<p>{{beer.abv}}</p>
+
+
+					<h3 class="text-lg font-bold">IBU</h3>
+					<p>{{beer.ibu}}</p>
+
 				  <h3 class="text-lg font-bold">Style/taste</h3>
-				  <div class="mt-2 flex gap-1">
-	
+				  <div class="mt-2 flex flex-col gap-1">
+					
+					<li>{{beer.style}}</li>
+					
 
 				  </div>
 
@@ -28,7 +40,6 @@
 				  <p class="text-xl font-bold">Actions</p>
 				</div>
 				<span class="pt-4">
-					<p>ID {{beer.get_id}} </p>
 				<a href="/beer/{{beer.get_id}}/delete" class="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Delete</a>
 				<a href="/beer/{{beer.get_id}}/edit" class="w-full rounded bg-blue-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Edit</a>
 				</span>
