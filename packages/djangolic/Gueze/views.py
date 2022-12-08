@@ -131,15 +131,21 @@ def create_beer_results(request):
 def update(request):
     return render(request, "forms/update.html")
 
-def delete(request, beer_id):
+def beerdelete(request,beer_id):
+    
     beer = Beer.objects.get(id=beer_id)
+    print(beer)
     beer.delete()
-    return render(request, "forms/delete.html")
-
+    return redirect("/random/")
 
 
 def random_beer(request):
     beers = list(Beer.objects.all())
+
+    # if no beers in database, return to index
+    if not beers:
+        return redirect("/")
+    
     beer = random.choice(beers)
     return render(request, "beer/beer-view.html",context={"beer":beer})  
 

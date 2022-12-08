@@ -58,6 +58,9 @@ class Beer(models.Model):
     taste = models.CharField(max_length=1500,blank=True,null=True)
     countries_sold_in = models.ManyToManyField(Country,related_name='countries_sold+',blank=True)
 
+    def get_id(self):
+        return self.id
+
     def get_countries(self):
         if(self.countries_sold_in.count() == 0):
             return ["Unknown"]

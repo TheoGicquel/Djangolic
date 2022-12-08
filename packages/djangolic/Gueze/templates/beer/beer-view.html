@@ -25,18 +25,15 @@
 					
 
 				  </div>
-				<div class="rounded border bg-gray-100 p-4">
-				  <p class="text-sm">
-					<span class="block"> Pay as low as $3/mo with 0% APR. </span>
-					<a href="" class="mt-1 inline-block underline"> Find out more </a>
-				  </p>
-				</div>
-				<div>
+
+				<div class="mb-4 p-4">
 				  <p class="text-xl font-bold">Actions</p>
 				</div>
-				<button type="submit" class="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Delete</button>
-				<button type="submit" class="w-full rounded bg-blue-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Edit</button>
-
+				<span class="pt-4">
+					<p>ID {{beer.get_id}} </p>
+				<a href="/beer/{{beer.get_id}}/delete" class="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Delete</a>
+				<a href="/beer/{{beer.get_id}}/edit" class="w-full rounded bg-blue-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Edit</a>
+				</span>
 			  </form>
 			</div>
 			<div class="lg:col-span-3">
