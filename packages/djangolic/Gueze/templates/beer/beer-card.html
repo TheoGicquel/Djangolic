@@ -13,10 +13,10 @@
   <span
     class="whitespace-nowrap rounded-full border-2 border-solid border-blue-300 bg-purple-100 px-2.5 py-0.5 text-xs text-blue-600"
   >
-  <a href="/brewery/{{beer.brewery.id}}/view">
+  {% comment %} <a href="/brewery/{{beer.brewery.id}}/view">  {% endcomment %}
   <em class="fa-solid fa-industry"></em>
     {{ beer.brewery.name }}
-  </a>
+  {% comment %} </a> {% endcomment %}
   </span>
 
 
