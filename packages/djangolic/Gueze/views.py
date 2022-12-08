@@ -25,9 +25,9 @@ def is_valid_queryparam(param):
 
 
 def filter(request):
-    print("--------- get -----------")
-    print(request.GET.items)
-    print("--------- /get -----------")
+    
+    
+    
     
     qs = Beer.objects.all()
     breweries = Brewery.objects.all()
@@ -70,7 +70,7 @@ def search_results_all(request):
 
 
 def search_results(request):
-    print('--------- search_results  -----------')
+    
 
     if(request.method == "GET"):
         qs = filter(request)
@@ -88,18 +88,15 @@ def search_results(request):
 
 
 def search_form_beer(request):
-    print('--------- search_form_beer -----------')
-    print("into form")
     context = {
         "BeerSearchForm": BeerSearchForm
     }
 
-    
     return render(request, "forms/search.html",context)
 
 
 def edit_beer_form(request,beer_id):
-    print('--------- edit_beer_form -----------')
+    
     beer = Beer.objects.get(id=beer_id)
     context = {
         "BeerUpdateForm": BeerUpdateForm(instance=beer),
@@ -110,9 +107,9 @@ def edit_beer_form(request,beer_id):
     return render(request, "forms/update.html",context)
 
 def edit_beer_result(request,beer_id):
+    beer = Beer.objects.get(id=beer_id)
     # edit beer in database
     if request.method == "POST":
-        beer = Beer.objects.get(id=beer_id)
         
         form = BeerUpdateForm(request.POST,instance=beer)
         if form.is_valid():
@@ -126,7 +123,7 @@ def edit_beer_result(request,beer_id):
 
 
 def create_beer_form(request):
-    print('--------- create_beer_form -----------')
+    
     context = {
         "BeerCreateForm": BeerCreateForm
     }
@@ -135,8 +132,8 @@ def create_beer_form(request):
 
 
 def create_beer_results(request):
-    print('--------- create_beer_results -----------')
-    print(request.POST)
+    
+    
     # add beer to database
     
     if request.method == "POST":
@@ -156,7 +153,7 @@ def update(request):
 def beerdelete(request,beer_id):
     
     beer = Beer.objects.get(id=beer_id)
-    print(beer)
+    
     beer.delete()
     return redirect("/random/")
 
@@ -176,18 +173,10 @@ def about(request):
     return render(request, "about/about.html")   
 
 def beerview(request,id):
-
-    #! This implementation is terrible right now, using primary keys to join would be better
-    
-    beer =  Beer.objects.get(id=id)
-    
+    beer =  Beer.objects.get(id=id)    
     return render(request, "beer/beer-view.html",context={"beer":beer})   
 
 
-def beerview_all(request):
-    
-    #! might be dangerous to fetch all data like this, remove before production
-    
+def beerview_all(request):    
     beers = Beer.objects.all()
-    
     return render(request, "beer/search-results.html",context={"beers":beers})   
