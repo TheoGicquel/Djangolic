@@ -16,6 +16,9 @@
     "gui": {
       "executor": "nx:run-commands",
       "options": {
+        "cypressConfig": "packages/djangolic-e2e/cypress.config.ts",
+        "baseUrl": "http://127.0.0.1:8000",
+        "testingType": "e2e",
         "cwd": "packages/djangolic-e2e",
         "commands": [
           {
