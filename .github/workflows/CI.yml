@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install Node.js
+      uses: actions/setup-node@v8
+      with:
+        node-version: 18.x
+    - name: setup project
+      run: bash install.sh
+    - name: launch server
+      run: nx run djangolic:serve-d
+    - name: perform cypress tests
+      run: nx run djangolic-e2e:e2e

@@ -13,6 +13,18 @@
           ]
         }
       },
+      "db-init": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "packages/djangolic",
+          "commands": [
+              "python3 manage.py makemigrations",
+              "python3 manage.py loaddata latest.yaml",
+              "python3 manage.py migrate --run-syncdb"
+          ]
+        }
+      },
+
       "setup-env": {
         "executor": "nx:run-commands",
         "options": {
@@ -39,7 +51,7 @@
           "cwd": "packages/djangolic",
           "commands": [
             {
-              "command": "python3 manage.py runserver"
+              "command": "python3 manage.py runserver 127.0.0.1:8000 &"
             }
           ]
         }
@@ -62,12 +74,11 @@
           "commands": [
             
             "python3 manage.py tailwind start &",
-            "python3 manage.py runserver"
-            
+            "python3 manage.py runserver" 
           ]
         }
       },
-      "watch": {
+      "watch-css": {
         "executor": "nx:run-commands",
         "options": {
           "cwd": "packages/djangolic",
@@ -78,7 +89,7 @@
         }
       },
 
-      "migrations": {
+      "make-migrations": {
         "executor": "nx:run-commands",
         "options": {
           "cwd": "packages/djangolic",
