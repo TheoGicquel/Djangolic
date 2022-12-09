@@ -32,19 +32,19 @@ npm install
 echo "[OK] npm install complete"
 
 echo "[*] installing packages dependencies.."
-nx run-many --target=install --all
+npx nx run-many --target=install --all
 echo "[OK] nx install complete"
 
 
 echo "[*] setting up default server .env variables"
-nx run djangolic:setup-env
+npx nx run djangolic:setup-env
 echo "[OK] env variables set ! you may want to change them in .env file"
 
 
 echo "[*] setting up server database.."
-nx run djangolic:db-init
+npx nx run djangolic:db-init
 echo "[OK] database setup complete"
 
 echo "[*] building tailwind css.."
-nx run djangolic:build-css
+npx nx run djangolic:build
 
