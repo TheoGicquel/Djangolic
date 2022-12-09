@@ -16,7 +16,7 @@ jobs:
       with:
         python-version: 3.8
     - name: Install Node.js
-      uses: actions/setup-node@v8
+      uses: actions/setup-node@v3
       with:
         node-version: 18.x
     - name: setup project
