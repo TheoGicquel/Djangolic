@@ -23,7 +23,7 @@
         "cwd": "packages/djangolic-e2e",
         "commands": [
           {
-            "command": "npx cypress open"
+            "command": "npx nx e2e djangolic-e2e --watch"
           }
         ]
       }

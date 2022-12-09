@@ -6,7 +6,7 @@
   "private": true,
   "devDependencies": {
     "@nrwl/cli": "^15.3.0",
-    "@nrwl/cypress": "15.2.4",
+    "@nrwl/cypress": "^15.2.4",
     "@nrwl/eslint-plugin-nx": "15.2.4",
     "@nrwl/js": "15.2.4",
     "@nrwl/linter": "15.2.4",
