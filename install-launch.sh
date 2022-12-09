@@ -1,3 +1,3 @@
 #!/bin/bash
 ./install.sh
-nx run djangolic:serve
+npx nx run djangolic:serve
