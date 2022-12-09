@@ -23,7 +23,5 @@ jobs:
       run: bash install.sh
     - name: install pip dependencies
       run:  pip install -r packages/djangolic/requirements.txt
-    - name: launch server
-      run: python3 packages/djangolic/manage.py runserver 127.0.0.1:8000 &
     - name: perform cypress tests
       run: npx nx run djangolic-e2e:e2e
