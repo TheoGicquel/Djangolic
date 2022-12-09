@@ -22,6 +22,6 @@ jobs:
     - name: setup project
       run: bash install.sh
     - name: launch server
-      run: nx run djangolic:serve-d
+      run: npx nx run djangolic:serve-d
     - name: perform cypress tests
-      run: nx run djangolic-e2e:e2e
+      run: npx nx run djangolic-e2e:e2e
