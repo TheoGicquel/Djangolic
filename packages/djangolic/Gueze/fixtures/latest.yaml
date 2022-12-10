@@ -365,7 +365,7 @@
     user: 1
     content_type: 12
     object_id: '5'
-    object_repr: Brasserie Fischer (brasserie du Pêcheur)
+    object_repr: Brasserie Fischer (brasserie du P�cheur)
     action_flag: 1
     change_message: '[{"added": {}}]'
 - model: admin.logentry
@@ -468,6 +468,206 @@
     object_repr: Asahi Super Dry
     action_flag: 2
     change_message: '[{"changed": {"fields": ["Ibu", "Image", "Taste"]}}]'
+- model: admin.logentry
+  pk: 48
+  fields:
+    action_time: 2022-12-07 23:19:31.690456+00:00
+    user: 1
+    content_type: 11
+    object_id: '6'
+    object_repr: Mabinine
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 49
+  fields:
+    action_time: 2022-12-07 23:19:31.850527+00:00
+    user: 1
+    content_type: 11
+    object_id: '5'
+    object_repr: Mabinine
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 50
+  fields:
+    action_time: 2022-12-10 15:29:37.992243+00:00
+    user: 2
+    content_type: 11
+    object_id: '16'
+    object_repr: AZD
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 51
+  fields:
+    action_time: 2022-12-10 15:45:43.965143+00:00
+    user: 2
+    content_type: 12
+    object_id: '7'
+    object_repr: Brasserie de Bretagne
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 52
+  fields:
+    action_time: 2022-12-10 15:46:52.197080+00:00
+    user: 2
+    content_type: 9
+    object_id: '8'
+    object_repr: Organic
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 53
+  fields:
+    action_time: 2022-12-10 15:47:00.558566+00:00
+    user: 2
+    content_type: 11
+    object_id: '17'
+    object_repr: Dremwel Blonde
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 54
+  fields:
+    action_time: 2022-12-10 15:48:30.927107+00:00
+    user: 2
+    content_type: 10
+    object_id: '6'
+    object_repr: Amber Ale
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 55
+  fields:
+    action_time: 2022-12-10 15:48:40.590064+00:00
+    user: 2
+    content_type: 11
+    object_id: '18'
+    object_repr: Dremwel Rousse
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 56
+  fields:
+    action_time: 2022-12-10 15:49:32.120748+00:00
+    user: 2
+    content_type: 11
+    object_id: '19'
+    object_repr: Dremwel Dor�e
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 57
+  fields:
+    action_time: 2022-12-10 15:50:53.950751+00:00
+    user: 2
+    content_type: 11
+    object_id: '20'
+    object_repr: Dremwel Bl� Noir
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 58
+  fields:
+    action_time: 2022-12-10 15:51:22.215681+00:00
+    user: 2
+    content_type: 10
+    object_id: '7'
+    object_repr: IPA
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 59
+  fields:
+    action_time: 2022-12-10 15:51:32.584587+00:00
+    user: 2
+    content_type: 11
+    object_id: '21'
+    object_repr: Dremwel IPA
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 60
+  fields:
+    action_time: 2022-12-10 15:52:07.453199+00:00
+    user: 2
+    content_type: 10
+    object_id: '8'
+    object_repr: White beer
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 61
+  fields:
+    action_time: 2022-12-10 15:52:37.808647+00:00
+    user: 2
+    content_type: 11
+    object_id: '22'
+    object_repr: Dremwel Blanche
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 62
+  fields:
+    action_time: 2022-12-10 15:55:29.242833+00:00
+    user: 2
+    content_type: 10
+    object_id: '9'
+    object_repr: Tripel
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 63
+  fields:
+    action_time: 2022-12-10 15:55:35.885625+00:00
+    user: 2
+    content_type: 9
+    object_id: '9'
+    object_repr: Belgian Tripel
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 64
+  fields:
+    action_time: 2022-12-10 15:56:22.766676+00:00
+    user: 2
+    content_type: 9
+    object_id: '10'
+    object_repr: Tripel
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 65
+  fields:
+    action_time: 2022-12-10 15:56:41.368637+00:00
+    user: 2
+    content_type: 10
+    object_id: '10'
+    object_repr: Sp�ciale
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 66
+  fields:
+    action_time: 2022-12-10 15:59:26.711128+00:00
+    user: 2
+    content_type: 11
+    object_id: '23'
+    object_repr: Tripel Karmeliet
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 67
+  fields:
+    action_time: 2022-12-10 16:03:00.012682+00:00
+    user: 2
+    content_type: 12
+    object_id: '7'
+    object_repr: Brasserie de Bretagne
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Beers"]}}]'
 - model: auth.permission
   pk: 1
   fields:
@@ -851,6 +1051,16 @@
   fields:
     session_data: .eJxVjEEOwiAQRe_C2hCGtjC4dO8ZyMAMUjVtUtqV8e7apAvd_vfef6lI21rj1mSJI6uzAnX63RLlh0w74DtNt1nneVqXMeld0Qdt-jqzPC-H-3dQqdVvHYq1HnsKnQkGChYUTJbLIGgByRXXGeCBqQffBQHxiACeHSRLkFG9P8deNyI:1p2Xwq:33Xcvp5qVGFzPyHzw1pocFBhxfL-VyAEkmqwNbGPvS8
     expire_date: 2022-12-20 13:25:24.558318+00:00
+- model: sessions.session
+  pk: a56chnq7j7noa6h657h313mceo5m934o
+  fields:
+    session_data: .eJxVjEEOwiAQRe_C2hCGtjC4dO8ZyMAMUjVtUtqV8e7apAvd_vfef6lI21rj1mSJI6uzAnX63RLlh0w74DtNt1nneVqXMeld0Qdt-jqzPC-H-3dQqdVvHYq1HnsKnQkGChYUTJbLIGgByRXXGeCBqQffBQHxiACeHSRLkFG9P8deNyI:1p33h1:vt9-u9Ue3wXPXZeKur2zhaZ3VxTA4-SHGkJVOgUL-h8
+    expire_date: 2022-12-21 23:19:11.394387+00:00
+- model: sessions.session
+  pk: un6hnq8fnk7hbxiy9plqtlme6dgo69yo
+  fields:
+    session_data: .eJxVjEEOwiAQRe_C2hCgFAaX7j0DmelMbdVAUtqV8e7apAvd_vfef6mM2zrlrcmSZ1Zn5dTpdyMcHlJ2wHcst6qHWtZlJr0r-qBNXyvL83K4fwcTtulbJwxoKPTROJ-iG0EsM0IXCbgjgGQD-wQsvVgPMSXTDT25UdjCGB2o9wfRUTdt:1p41k8:_QQjTAUTzOu-MRhEi6FkKARyw5tXdPPQfNijVz5y8ik
+    expire_date: 2022-12-24 15:26:24.150564+00:00
 - model: Gueze.glass
   pk: 1
   fields:
@@ -975,6 +1185,18 @@
   pk: 7
   fields:
     name: Japanese Rice Lager
+- model: Gueze.style
+  pk: 8
+  fields:
+    name: Organic
+- model: Gueze.style
+  pk: 9
+  fields:
+    name: Belgian Tripel
+- model: Gueze.style
+  pk: 10
+  fields:
+    name: Tripel
 - model: Gueze.type
   pk: 1
   fields:
@@ -995,6 +1217,26 @@
   pk: 5
   fields:
     name: Ale
+- model: Gueze.type
+  pk: 6
+  fields:
+    name: Amber Ale
+- model: Gueze.type
+  pk: 7
+  fields:
+    name: IPA
+- model: Gueze.type
+  pk: 8
+  fields:
+    name: White beer
+- model: Gueze.type
+  pk: 9
+  fields:
+    name: Tripel
+- model: Gueze.type
+  pk: 10
+  fields:
+    name: Sp�ciale
 - model: Gueze.beer
   pk: 1
   fields:
@@ -1007,7 +1249,7 @@
     glass: 15
     type: 1
     style: 5
-    taste: Arômes maltés puissants de céréales et de maïs ainsi que des senteurs de
+    taste: Ar�mes malt�s puissants de c�r�ales et de ma�s ainsi que des senteurs de
       banane et de clou de girofle.
     countries_sold_in:
     - 1
@@ -1024,11 +1266,11 @@
     glass: 17
     type: 3
     style: 3
-    taste: Guinness, accompagnée comme à l'habitude de son inimitable chapeau de mousse
-      beige et compact. De cet ensemble se dégagent des arômes doux et torréfiés de
-      malt évoquant le cacao, le café, les fruits secs et les grains grillés. On retrouve
-      en bouche des saveurs similaires à celles perçues dans le nez, avec une douceur
-      sucrée qui s'équilibre avec les saveurs prononcées de torréfaction. Goûter cette
+    taste: Guinness, accompagn�e comme � l'habitude de son inimitable chapeau de mousse
+      beige et compact. De cet ensemble se d�gagent des ar�mes doux et torr�fi�s de
+      malt �voquant le cacao, le caf�, les fruits secs et les grains grill�s. On retrouve
+      en bouche des saveurs similaires � celles per�ues dans le nez, avec une douceur
+      sucr�e qui s'�quilibre avec les saveurs prononc�es de torr�faction. Go�ter cette
       Guinness, c'est faire le choix d'une des meilleures Stouts d'Irlande !
     countries_sold_in:
     - 1
@@ -1049,10 +1291,10 @@
     glass: 1
     type: 5
     style: 6
-    taste: Avec un bel équilibre doux et amer dans un corps lisse et puissant, la
-      Kwak offre de délicieuses saveurs d'abricot, de malt et de prune, associées
-      à la banane, la réglisse et la pomme verte. L'expérience de dégustation se termine
-      par une finale épicée et sucrée.
+    taste: Avec un bel �quilibre doux et amer dans un corps lisse et puissant, la
+      Kwak offre de d�licieuses saveurs d'abricot, de malt et de prune, associ�es
+      � la banane, la r�glisse et la pomme verte. L'exp�rience de d�gustation se termine
+      par une finale �pic�e et sucr�e.
     countries_sold_in:
     - 1
     - 2
@@ -1069,14 +1311,147 @@
     glass: 6
     type: 1
     style: 7
-    taste: Côté gustatif, la bière Asahi est douce et faible en amertume. Elle présente
-      beaucoup d'arômes différents. Asahi est obtenue grâce à une levure rare et exclusive,
-      qui non seulement développe une fermentation exceptionnelle, mais produit un
-      arôme malté complexe dans une saveur élégante et sophistiquée.
+    taste: C�t� gustatif, la bi�re Asahi est douce et faible en amertume. Elle pr�sente
+      beaucoup d'ar�mes diff�rents. Asahi est obtenue gr�ce � une levure rare et exclusive,
+      qui non seulement d�veloppe une fermentation exceptionnelle, mais produit un
+      ar�me malt� complexe dans une saveur �l�gante et sophistiqu�e.
     countries_sold_in:
     - 1
     - 3
     - 4
+- model: Gueze.beer
+  pk: 17
+  fields:
+    name: Dremwel Blonde
+    srm: EBBB40
+    abv: 5.0
+    ibu: 30.0
+    image: https://www.brasserie-bretagne.fr/wp-content/uploads/2022/01/33cl_bouteille-dremmwel-Blonde-min.png
+    brewery: 7
+    glass: 12
+    type: 1
+    style: 8
+    taste: Une bi�re blonde intemporelle et engag�e. Elle puise sa singularit� dans
+      ses ar�mes malt�s et fruit�s qui lui conf�rent un corps rond et floral. Avis
+      aux amateurs de blondes �labor�es
+    countries_sold_in: []
+- model: Gueze.beer
+  pk: 18
+  fields:
+    name: Dremwel Rousse
+    srm: ab3e2b
+    abv: 6.0
+    ibu: 40.0
+    image: https://www.brasserie-bretagne.fr/wp-content/uploads/2022/01/33cl_bouteille-dremmwel-Rousse-min.png
+    brewery: 7
+    glass: 2
+    type: 6
+    style: 8
+    taste: 'Une grande dame disposant d�un bouquet de saveurs �tonnant. En bouche,
+      les d�couvertes aromatiques se succ�dent avec subtilit� et gourmandise : les
+      ar�mes de cerises et de prunes c�toient la girofle, la cannelle et la muscade.
+      Les houblons apportent une juste amertume et le malt offre une longueur caram�lis�e
+      et toast�e. Elle pourrait rapidement devenir votre favorite.'
+    countries_sold_in:
+    - 1
+- model: Gueze.beer
+  pk: 19
+  fields:
+    name: Dremwel Dor�e
+    srm: ab3e2b
+    abv: 7.7
+    ibu: 30.0
+    image: https://www.brasserie-bretagne.fr/wp-content/uploads/2022/01/33cl_bouteille-dremmwel-Doree-min.png
+    brewery: 7
+    glass: 2
+    type: 1
+    style: 8
+    taste: Sa robe abricot dor�e exalte des ar�mes de ch�taigne. Une bi�re aromatique
+      et de caract�re au corps �quilibr� et subtil r�v�lant un go�t de levure et une
+      amertume puissante succ�dant aux notes fruit�es et bois�es. Amateurs de bi�res
+      typ�es, bonjour.
+    countries_sold_in:
+    - 1
+- model: Gueze.beer
+  pk: 20
+  fields:
+    name: Dremwel Bl� Noir
+    srm: 5e2217
+    abv: 5.4
+    ibu: 40.0
+    image: https://www.brasserie-bretagne.fr/wp-content/uploads/2022/01/33cl_bouteille-dremmwel-Ble-noir-min.png
+    brewery: 7
+    glass: 2
+    type: 6
+    style: 8
+    taste: Une bi�re sans gluten qui r�v�lent sous sa robe ambr�e la puissance aromatique
+      du bl� noir, la d�licatesse du caramel et de la levure et la douceur de la noisette
+      et de la noix. Une partition sans faute, pour une grande bi�re innovante et
+      que l�on affectionne.
+    countries_sold_in:
+    - 1
+- model: Gueze.beer
+  pk: 21
+  fields:
+    name: Dremwel IPA
+    srm: f5993a
+    abv: 6.0
+    ibu: 50.0
+    image: https://www.brasserie-bretagne.fr/wp-content/uploads/2022/01/33cl_bouteille-dremmwel-IPA-min.png
+    brewery: 7
+    glass: 2
+    type: 7
+    style: 8
+    taste: Une India Pale Ale engag�e qui vous offre un bouquet fruit� et une franche
+      amertume. Une bi�re d�salt�rante et de caract�re, id�ale pour les amateurs de
+      blondes houblonn�es
+    countries_sold_in:
+    - 1
+- model: Gueze.beer
+  pk: 22
+  fields:
+    name: Dremwel Blanche
+    srm: f8cc4c
+    abv: 4.5
+    ibu: 20.0
+    image: https://www.brasserie-bretagne.fr/wp-content/uploads/2022/01/33cl_bouteille-dremmwel-Blanche-min.png
+    brewery: 7
+    glass: 2
+    type: 8
+    style: 8
+    taste: Une bi�re de soif. Un corps l�ger imposant des notes citronn�es et une
+      amertume l�g�re pour une bi�re intemporelle, ravissant tous les palais.
+    countries_sold_in: []
+- model: Gueze.beer
+  pk: 23
+  fields:
+    name: Tripel Karmeliet
+    srm: 9c6111
+    abv: 8.4
+    ibu: 30.0
+    image: https://d33za54wpumlhy.cloudfront.net/eyJidWNrZXQiOiJzYXZldXJiaWVyZSIsImtleSI6ImltZy9wLzgyLTYyMTI0LmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODB9LCJwbmciOnsicXVhbGl0eSI6ODB9LCJyZXNpemUiOnsid2lkdGgiOjc4NiwiaGVpZ2h0Ijo0OTAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjAsImciOjAsImIiOjAsImFscGhhIjowfX19fQ==
+    brewery: 6
+    glass: 2
+    type: 10
+    style: 10
+    taste: 'La bi�re Tripel Karmeliet est l''un des grands classiques des bi�res belges.
+      Selon la brasserie Bosteels, la recette utilis�e serait la m�me depuis 1679.
+      A l''�poque, la Karmeliet �tait alors produite au sein de l''abbaye carm�lite
+      de Dendermonde. Bi�re de fermentation haute et referment�e en bouteille, elle
+      pr�sentait d�j� � l''�poque la particularit� d''�tre produite � partir de trois
+      c�r�ales : l''orge, le froment et l''avoine. C''est d''ailleurs de ces ingr�dients
+      qu''elle tire son nom.  A la d�gustation, cette bi�re belge pr�sente une robe
+      blonde dor�e et une mousse cr�meuse. Le nez s''av�re � la fois raffin� et complexe.
+      On retrouve ainsi les notes d''�pices et de banane propres � la levure utilis�e
+      m�l�es aux ar�mes agrumes du houblon Styrians. En bouche, ce sont les diff�rentes
+      c�r�ales qui s''expriment en premier, associ�es ensuite aux touches houblonn�es
+      du Styrian. La texture, � la fois s�che et cr�meuse rend la Tripel Karmeliet
+      d�licieusement �quilibr�e.  Afin qu''elle puisse d�velopper au mieux sa complexit�
+      aromatique, son verre Tripel Karmeliet 25 cl ou 30 cl est �galement disponible
+      !'
+    countries_sold_in:
+    - 1
+    - 2
 - model: Gueze.brewery
   pk: 1
   fields:
@@ -1104,7 +1479,7 @@
 - model: Gueze.brewery
   pk: 5
   fields:
-    name: Brasserie Fischer (brasserie du Pêcheur)
+    name: Brasserie Fischer (brasserie du P�cheur)
     country: 1
     beers: []
 - model: Gueze.brewery
@@ -1113,3 +1488,15 @@
     name: Brouwerij Bosteels
     country: 2
     beers: []
+- model: Gueze.brewery
+  pk: 7
+  fields:
+    name: Brasserie de Bretagne
+    country: 1
+    beers:
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
