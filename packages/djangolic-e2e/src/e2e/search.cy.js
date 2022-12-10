@@ -1,10 +1,21 @@
-describe('The Home Page', () => {
-  it('successfully loads', () => {
-    cy.visit('http://127.0.0.1:8000/search') // change URL to match your dev URL
+describe('The Search Function', () => {
+
+  beforeEach(() => {
+    cy.visit('/search')
+  })
+
+  it('successfully navigates', () => {
+    cy.url().should('include', '/search')
+  })
+  it('fills the form', () => {
+    cy.get('input[name*="name"]').type('Guiness')
+  })
 
 
+  it('fills the form and search for a Guinnes', () => {
     cy.get('input[name*="name"]').type('Guiness')
     cy.get('button[type*="submit"]').click()
-    cy.get('a[href*="/beer/2/view"]').contains('Guiness').should('not.null')
+    cy.get('h3').contains('Guiness')
   })
+
 })

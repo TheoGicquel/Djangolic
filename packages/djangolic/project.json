@@ -40,7 +40,7 @@
         "options": {
           "cwd": "packages/djangolic",
           "commands": [
-              "python3 manage.py runserver 127.0.0.1:8000"
+              "python3 manage.py runserver 127.0.0.1:8000 --noreload"
             
           ]
         }
@@ -51,7 +51,7 @@
           "cwd": "packages/djangolic",
           "commands": [
             {
-              "command": "python3 manage.py runserver 127.0.0.1:8000 &"
+              "command": "python3 manage.py runserver 127.0.0.1:8000 --noreload &"
             }
           ]
         }

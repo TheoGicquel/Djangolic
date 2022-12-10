@@ -33,7 +33,7 @@ describe('Buttons routing in index page navbar should navigate to :', () => {
     it('goes to search form', () => {
 
       cy.get('header').contains('Search').click()
-      cy.url().should('eq', 'http://127.0.0.1:8000/search')
+      cy.url().should('eq', Cypress.config().baseUrl +'/search')
     })
       it('goes to create form', () => {
 
