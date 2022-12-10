@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 import random
 from django.db.models import Q, Count
 import os
+from icecream import ic
 
 # Create your views here.
 def index(request):
@@ -24,13 +25,19 @@ def is_valid_queryparam(param):
     return param != '' and param is not None
 
 
+
+
+
+
 def filter(request):
     
     
-    
-    
+    ic("filter")
     qs = Beer.objects.all()
     breweries = Brewery.objects.all()
+    countries = Country.objects.all()
+    ic(countries)
+    ic(breweries)
     name_contains_query = request.GET.get('name')
     ibu_exact_query = request.GET.get('ibu')
     abv_exact_query = request.GET.get('abv')
@@ -38,25 +45,34 @@ def filter(request):
     type_exact_query = request.GET.get('type')
     style_exact_query = request.GET.get('style')
     brewery_exact_query = request.GET.get('brewery')
+    countries_sold_in_exact_query = request.GET.get('countries_sold_in')
+
+    
 
     if is_valid_queryparam(name_contains_query):
         qs = qs.filter(name__icontains=name_contains_query)
 
-    elif is_valid_queryparam(ibu_exact_query):
+    if is_valid_queryparam(ibu_exact_query):
         qs = qs.filter(ibu__exact=ibu_exact_query)
 
-    elif is_valid_queryparam(abv_exact_query):
+    if is_valid_queryparam(abv_exact_query):
         qs = qs.filter(abv__exact=abv_exact_query)
     
-    elif is_valid_queryparam(glass_exact_query):
+    if is_valid_queryparam(glass_exact_query):
         qs = qs.filter(glass__exact=glass_exact_query)
     
-    elif is_valid_queryparam(type_exact_query):
+    if is_valid_queryparam(type_exact_query):
         qs = qs.filter(type__exact=type_exact_query)
     
-    elif is_valid_queryparam(style_exact_query):
+    if is_valid_queryparam(style_exact_query):
         qs = qs.filter(style__exact=style_exact_query)
-
+        
+    if is_valid_queryparam(brewery_exact_query):
+        qs = qs.filter(brewery__exact=brewery_exact_query)
+    
+    if is_valid_queryparam(countries_sold_in_exact_query):
+        qs = qs.filter(countries_sold_in__exact=countries_sold_in_exact_query)
+    
     return qs
 
 def search_results_all(request):
