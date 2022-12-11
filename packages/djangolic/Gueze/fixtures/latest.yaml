@@ -365,7 +365,7 @@
     user: 1
     content_type: 12
     object_id: '5'
-    object_repr: Brasserie Fischer (brasserie du P�cheur)
+    object_repr: Brasserie Fischer (brasserie du Pécheur)
     action_flag: 1
     change_message: '[{"added": {}}]'
 - model: admin.logentry
@@ -555,7 +555,7 @@
     user: 2
     content_type: 11
     object_id: '19'
-    object_repr: Dremwel Dor�e
+    object_repr: Dremwel Dorée
     action_flag: 1
     change_message: '[{"added": {}}]'
 - model: admin.logentry
@@ -565,7 +565,7 @@
     user: 2
     content_type: 11
     object_id: '20'
-    object_repr: Dremwel Bl� Noir
+    object_repr: Dremwel Blé Noir
     action_flag: 1
     change_message: '[{"added": {}}]'
 - model: admin.logentry
@@ -645,7 +645,7 @@
     user: 2
     content_type: 10
     object_id: '10'
-    object_repr: Sp�ciale
+    object_repr: Spéciale
     action_flag: 1
     change_message: '[{"added": {}}]'
 - model: admin.logentry
@@ -1236,7 +1236,7 @@
 - model: Gueze.type
   pk: 10
   fields:
-    name: Sp�ciale
+    name: Spéciale
 - model: Gueze.beer
   pk: 1
   fields:
@@ -1249,7 +1249,7 @@
     glass: 15
     type: 1
     style: 5
-    taste: Ar�mes malt�s puissants de c�r�ales et de ma�s ainsi que des senteurs de
+    taste: Arémes maltés puissants de céréales et de maés ainsi que des senteurs de
       banane et de clou de girofle.
     countries_sold_in:
     - 1
@@ -1266,11 +1266,11 @@
     glass: 17
     type: 3
     style: 3
-    taste: Guinness, accompagn�e comme � l'habitude de son inimitable chapeau de mousse
-      beige et compact. De cet ensemble se d�gagent des ar�mes doux et torr�fi�s de
-      malt �voquant le cacao, le caf�, les fruits secs et les grains grill�s. On retrouve
-      en bouche des saveurs similaires � celles per�ues dans le nez, avec une douceur
-      sucr�e qui s'�quilibre avec les saveurs prononc�es de torr�faction. Go�ter cette
+    taste: Guinness, accompagnée comme é l'habitude de son inimitable chapeau de mousse
+      beige et compact. De cet ensemble se dégagent des arémes doux et torréfiés de
+      malt évoquant le cacao, le café, les fruits secs et les grains grillés. On retrouve
+      en bouche des saveurs similaires é celles peréues dans le nez, avec une douceur
+      sucrée qui s'équilibre avec les saveurs prononcées de torréfaction. Goéter cette
       Guinness, c'est faire le choix d'une des meilleures Stouts d'Irlande !
     countries_sold_in:
     - 1
@@ -1291,10 +1291,10 @@
     glass: 1
     type: 5
     style: 6
-    taste: Avec un bel �quilibre doux et amer dans un corps lisse et puissant, la
-      Kwak offre de d�licieuses saveurs d'abricot, de malt et de prune, associ�es
-      � la banane, la r�glisse et la pomme verte. L'exp�rience de d�gustation se termine
-      par une finale �pic�e et sucr�e.
+    taste: Avec un bel équilibre doux et amer dans un corps lisse et puissant, la
+      Kwak offre de délicieuses saveurs d'abricot, de malt et de prune, associées
+      é la banane, la réglisse et la pomme verte. L'expérience de dégustation se termine
+      par une finale épicée et sucrée.
     countries_sold_in:
     - 1
     - 2
@@ -1311,10 +1311,10 @@
     glass: 6
     type: 1
     style: 7
-    taste: C�t� gustatif, la bi�re Asahi est douce et faible en amertume. Elle pr�sente
-      beaucoup d'ar�mes diff�rents. Asahi est obtenue gr�ce � une levure rare et exclusive,
-      qui non seulement d�veloppe une fermentation exceptionnelle, mais produit un
-      ar�me malt� complexe dans une saveur �l�gante et sophistiqu�e.
+    taste: Cété gustatif, la biére Asahi est douce et faible en amertume. Elle présente
+      beaucoup d'arémes différents. Asahi est obtenue gréce é une levure rare et exclusive,
+      qui non seulement développe une fermentation exceptionnelle, mais produit un
+      aréme malté complexe dans une saveur élégante et sophistiquée.
     countries_sold_in:
     - 1
     - 3
@@ -1331,9 +1331,9 @@
     glass: 12
     type: 1
     style: 8
-    taste: Une bi�re blonde intemporelle et engag�e. Elle puise sa singularit� dans
-      ses ar�mes malt�s et fruit�s qui lui conf�rent un corps rond et floral. Avis
-      aux amateurs de blondes �labor�es
+    taste: Une biére blonde intemporelle et engagée. Elle puise sa singularité dans
+      ses arémes maltés et fruités qui lui conférent un corps rond et floral. Avis
+      aux amateurs de blondes élaborées
     countries_sold_in: []
 - model: Gueze.beer
   pk: 18
@@ -1347,17 +1347,17 @@
     glass: 2
     type: 6
     style: 8
-    taste: 'Une grande dame disposant d�un bouquet de saveurs �tonnant. En bouche,
-      les d�couvertes aromatiques se succ�dent avec subtilit� et gourmandise : les
-      ar�mes de cerises et de prunes c�toient la girofle, la cannelle et la muscade.
-      Les houblons apportent une juste amertume et le malt offre une longueur caram�lis�e
-      et toast�e. Elle pourrait rapidement devenir votre favorite.'
+    taste: 'Une grande dame disposant déun bouquet de saveurs étonnant. En bouche,
+      les découvertes aromatiques se succédent avec subtilité et gourmandise : les
+      arémes de cerises et de prunes cétoient la girofle, la cannelle et la muscade.
+      Les houblons apportent une juste amertume et le malt offre une longueur caramélisée
+      et toastée. Elle pourrait rapidement devenir votre favorite.'
     countries_sold_in:
     - 1
 - model: Gueze.beer
   pk: 19
   fields:
-    name: Dremwel Dor�e
+    name: Dremwel Dorée
     srm: ab3e2b
     abv: 7.7
     ibu: 30.0
@@ -1366,16 +1366,16 @@
     glass: 2
     type: 1
     style: 8
-    taste: Sa robe abricot dor�e exalte des ar�mes de ch�taigne. Une bi�re aromatique
-      et de caract�re au corps �quilibr� et subtil r�v�lant un go�t de levure et une
-      amertume puissante succ�dant aux notes fruit�es et bois�es. Amateurs de bi�res
-      typ�es, bonjour.
+    taste: Sa robe abricot dorée exalte des arémes de chétaigne. Une biére aromatique
+      et de caractére au corps équilibré et subtil révélant un goét de levure et une
+      amertume puissante succédant aux notes fruitées et boisées. Amateurs de biéres
+      typées, bonjour.
     countries_sold_in:
     - 1
 - model: Gueze.beer
   pk: 20
   fields:
-    name: Dremwel Bl� Noir
+    name: Dremwel Blé Noir
     srm: 5e2217
     abv: 5.4
     ibu: 40.0
@@ -1384,10 +1384,10 @@
     glass: 2
     type: 6
     style: 8
-    taste: Une bi�re sans gluten qui r�v�lent sous sa robe ambr�e la puissance aromatique
-      du bl� noir, la d�licatesse du caramel et de la levure et la douceur de la noisette
-      et de la noix. Une partition sans faute, pour une grande bi�re innovante et
-      que l�on affectionne.
+    taste: Une biére sans gluten qui révélent sous sa robe ambrée la puissance aromatique
+      du blé noir, la délicatesse du caramel et de la levure et la douceur de la noisette
+      et de la noix. Une partition sans faute, pour une grande biére innovante et
+      que léon affectionne.
     countries_sold_in:
     - 1
 - model: Gueze.beer
@@ -1402,9 +1402,9 @@
     glass: 2
     type: 7
     style: 8
-    taste: Une India Pale Ale engag�e qui vous offre un bouquet fruit� et une franche
-      amertume. Une bi�re d�salt�rante et de caract�re, id�ale pour les amateurs de
-      blondes houblonn�es
+    taste: Une India Pale Ale engagée qui vous offre un bouquet fruité et une franche
+      amertume. Une biére désaltérante et de caractére, idéale pour les amateurs de
+      blondes houblonnées
     countries_sold_in:
     - 1
 - model: Gueze.beer
@@ -1419,8 +1419,8 @@
     glass: 2
     type: 8
     style: 8
-    taste: Une bi�re de soif. Un corps l�ger imposant des notes citronn�es et une
-      amertume l�g�re pour une bi�re intemporelle, ravissant tous les palais.
+    taste: Une biére de soif. Un corps léger imposant des notes citronnées et une
+      amertume légére pour une biére intemporelle, ravissant tous les palais.
     countries_sold_in: []
 - model: Gueze.beer
   pk: 23
@@ -1434,20 +1434,20 @@
     glass: 2
     type: 10
     style: 10
-    taste: 'La bi�re Tripel Karmeliet est l''un des grands classiques des bi�res belges.
-      Selon la brasserie Bosteels, la recette utilis�e serait la m�me depuis 1679.
-      A l''�poque, la Karmeliet �tait alors produite au sein de l''abbaye carm�lite
-      de Dendermonde. Bi�re de fermentation haute et referment�e en bouteille, elle
-      pr�sentait d�j� � l''�poque la particularit� d''�tre produite � partir de trois
-      c�r�ales : l''orge, le froment et l''avoine. C''est d''ailleurs de ces ingr�dients
-      qu''elle tire son nom.  A la d�gustation, cette bi�re belge pr�sente une robe
-      blonde dor�e et une mousse cr�meuse. Le nez s''av�re � la fois raffin� et complexe.
-      On retrouve ainsi les notes d''�pices et de banane propres � la levure utilis�e
-      m�l�es aux ar�mes agrumes du houblon Styrians. En bouche, ce sont les diff�rentes
-      c�r�ales qui s''expriment en premier, associ�es ensuite aux touches houblonn�es
-      du Styrian. La texture, � la fois s�che et cr�meuse rend la Tripel Karmeliet
-      d�licieusement �quilibr�e.  Afin qu''elle puisse d�velopper au mieux sa complexit�
-      aromatique, son verre Tripel Karmeliet 25 cl ou 30 cl est �galement disponible
+    taste: 'La biére Tripel Karmeliet est l''un des grands classiques des biéres belges.
+      Selon la brasserie Bosteels, la recette utilisée serait la méme depuis 1679.
+      A l''époque, la Karmeliet était alors produite au sein de l''abbaye carmélite
+      de Dendermonde. Biére de fermentation haute et refermentée en bouteille, elle
+      présentait déjé é l''époque la particularité d''étre produite é partir de trois
+      céréales : l''orge, le froment et l''avoine. C''est d''ailleurs de ces ingrédients
+      qu''elle tire son nom.  A la dégustation, cette biére belge présente une robe
+      blonde dorée et une mousse crémeuse. Le nez s''avére é la fois raffiné et complexe.
+      On retrouve ainsi les notes d''épices et de banane propres é la levure utilisée
+      mélées aux arémes agrumes du houblon Styrians. En bouche, ce sont les différentes
+      céréales qui s''expriment en premier, associées ensuite aux touches houblonnées
+      du Styrian. La texture, é la fois séche et crémeuse rend la Tripel Karmeliet
+      délicieusement équilibrée.  Afin qu''elle puisse développer au mieux sa complexité
+      aromatique, son verre Tripel Karmeliet 25 cl ou 30 cl est également disponible
       !'
     countries_sold_in:
     - 1
@@ -1479,7 +1479,7 @@
 - model: Gueze.brewery
   pk: 5
   fields:
-    name: Brasserie Fischer (brasserie du P�cheur)
+    name: Brasserie Fischer (brasserie du Pécheur)
     country: 1
     beers: []
 - model: Gueze.brewery
