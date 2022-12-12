@@ -7,6 +7,7 @@
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
+        "devServerTarget": "djangolic:serve-d",
         "cypressConfig": "packages/djangolic-e2e/cypress.config.ts",
         "baseUrl": "http://127.0.0.1:8000",
         "testingType": "e2e"
@@ -16,10 +17,27 @@
     "gui": {
       "executor": "nx:run-commands",
       "options": {
+        "cypressConfig": "packages/djangolic-e2e/cypress.config.ts",
+        "baseUrl": "http://127.0.0.1:8000",
+        "testingType": "e2e",
         "cwd": "packages/djangolic-e2e",
         "commands": [
           {
-            "command": "npx cypress open"
+            "command": "npx cypress open --project ."
+          }
+        ]
+      }
+    },
+    "gui-noserver": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cypressConfig": "packages/djangolic-e2e/cypress.config.ts",
+        "baseUrl": "http://127.0.0.1:8000",
+        "testingType": "e2e",
+        "cwd": "packages/djangolic-e2e",
+        "commands": [
+          {
+            "command": "npx cypress open --project ./packages/djangolic-e2e/"
           }
         ]
       }
