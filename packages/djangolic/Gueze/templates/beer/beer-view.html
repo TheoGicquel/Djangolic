@@ -4,13 +4,13 @@
 	  <section>
 		<div class="relative mx-auto max-w-screen-xl px-4 py-8">
 		  <div>
-			<h1 class="text-2xl font-bold lg:text-3xl">{{ beer.name }}</h1>
-			<p class="mt-1 text-sm text-gray-500">ID: #{{beer.id}}</p>
+			<h1 class="text-2xl text-amber-600 font-bold lg:text-3xl">{{ beer.name }}</h1>
+			<p class="mt-1 text-sm text-gray-600">ID #{{beer.id}}</p>
 		  </div>
 		  <div class="grid gap-8 lg:grid-cols-4 lg:items-start">
 			<div class="lg:col-span-3">
-			  <div class="relative mt-4">
-				<img alt="Tee" src="{{beer.image}}" class="h-72 w-50 rounded-l object-cover lg:h-[540px]" />
+			  <div class="relative mt-4 ">
+				<img alt="Beer bottle Image" src="{{beer.image}}" class="shadow-sm shadow-black mx-auto h-72 w-50 rounded-xl object-cover  p-1 lg:h-[540px]" />
 			
 			  </div>
 			 
@@ -21,12 +21,15 @@
 					<h3 class="text-lg font-bold">Name</h3>
 					<p>{{beer.name}}</p>
 
-					<h3 class="text-lg font-bold">ABV</h3>
-					<p>{{beer.abv}}</p>
+					<h3 class="text-lg font-bold mb-0">ABV</h3>
+					<p>{{beer.abv}}%</p>
 
 
-					<h3 class="text-lg font-bold">IBU</h3>
+					<h3 class="text-lg font-bold ">IBU</h3>
 					<p>{{beer.ibu}}</p>
+
+					<h3 class="text-lg font-bold">Beer Type</h3>
+						<li>{{beer.type}}</li>
 
 				  <h3 class="text-lg font-bold">Style/taste</h3>
 				  <div class="mt-2 flex flex-col gap-1">
@@ -36,32 +39,54 @@
 
 				  </div>
 
+					<h3 class="text-lg font-bold">Recommended Drinking Glass</h3>
+					<li>{{beer.glass}}</li>
+
+					<h3 class="text-lg font-bold">Color</h3>
+					<div class="mt-1.5 sm:ml-3 sm:mt-0">
+						<span
+						  class="whitespace-nowrap rounded-full px-2.5 py-0.5 text-m font-medium"
+						  style="background-color:#{{beer.srm}}">
+						  #{{ beer.srm}}
+					</span>
+					  </div>
+
+
 				<div class="mb-4 p-4">
 				  <p class="text-xl font-bold">Actions</p>
 				</div>
 				<span class="pt-4">
-				<a href="/beer/{{beer.get_id}}/delete" class="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Delete</a>
-				<a href="/beer/{{beer.get_id}}/edit" class="w-full rounded bg-blue-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Edit</a>
+				<a href="/beer/{{beer.get_id}}/delete" class="w-full rounded bg-orange-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Delete</a>
+				<a href="/beer/{{beer.get_id}}/edit" class="w-full rounded bg-green-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">Edit</a>
 				</span>
 			  </form>
 			</div>
 			<div class="lg:col-span-3">
 			  <div class="prose max-w-none [&>iframe]:mt-6 [&>iframe]:aspect-video [&>iframe]:w-full [&>iframe]:rounded-xl">
-				<h2>Sold in :</h2>
-				<div class="flex">
+
+
+				<h2>Taste</h2>
 				
+				<p>{{beer.taste}} </p>
+
+				<h2>Brewery</h2>
+				<ul>
+					<li>Brewed by <em class="font-bold">{{beer.brewery}}</em></li>
+					<li>Country of origin : <em class="font-bold">{{beer.brewery.country}}</em></li>
+
+				<h2 id="countries_sold">Can be bought in these countries :</h2>
+				<div class="flex">
+	
 				<ul>
 					{% for country in beer.get_countries %}
 					<li>{{country}}</li>
 					{% endfor %}
 				</ul>
-				
+					
+				<h2>
 
 				</div>
 			  
-				<h2>Taste</h2>
-				
-				<p>{{beer.taste}} </p>
 				
 			  </div>
 			</div>

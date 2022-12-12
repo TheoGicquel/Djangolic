@@ -1,0 +1,20 @@
+{
+  "name": "djangolic-e2e",
+  "version": "1.0.0",
+  "description": "cypress tests for djangolic app",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run" : "cypress run",
+    "cypress:test": "start-server-and-test 'nx run djangolic:serve' http://localhost:4200 cypress:run",
+    "test": "nx djangolic-e2e:e2e",
+    "start-server": "nx run djangolic:serve &"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.0.1",
+    "start-server-and-test": "^1.15.1",
+    "typescript": "^4.9.4"
+  }
+}
+  

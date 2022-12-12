@@ -5,8 +5,8 @@
   "scripts": {},
   "private": true,
   "devDependencies": {
-    "@nrwl/cli": "^15.2.4",
-    "@nrwl/cypress": "15.2.4",
+    "@nrwl/cli": "^15.3.0",
+    "@nrwl/cypress": "^15.2.4",
     "@nrwl/eslint-plugin-nx": "15.2.4",
     "@nrwl/js": "15.2.4",
     "@nrwl/linter": "15.2.4",
@@ -15,11 +15,11 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
-    "cypress": "^11.0.0",
+    "cypress": "^11.2.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
-    "nx": "15.2.4",
+    "nx": "^15.3.0",
     "prettier": "^2.6.2",
     "typescript": "~4.8.2"
   }
