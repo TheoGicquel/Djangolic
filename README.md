@@ -11,12 +11,22 @@
 <img src="https://github.com/TheoGicquel/Djangolic/actions/workflows/CI.yml/badge.svg?branch=develop">
 </a>
 
+<a style="display:inline" href="https://wakatime.com/badge/github/TheoGicquel/Djangolic"><img src="https://wakatime.com/badge/github/TheoGicquel/Djangolic.svg" alt="wakatime"></a>
+
 </div>
 
 
 
 A Django + Tailwind CRUD app to search and organize beers.
 
+
+
+
+## Authors
+
+- [@TheoGicquel](https://www.github.com/TheoGicquel) : **Frontend, Backend, Tests** - [View commits](https://github.com/TheoGicquel/Djangolic/commits?author=TheoGicquel) <a href="https://wakatime.com/badge/github/TheoGicquel/Djangolic"><img src="https://wakatime.com/badge/github/TheoGicquel/Djangolic.svg" alt="wakatime"></a>
+- [@Hazarel](https://www.github.com/Hazarel) ( AKA Maxime Joubert ) : **Tests** - [View commits](https://github.com/TheoGicquel/Djangolic/commits?author=Hazarel)
+- [@Volpe08](https://github.com/Volpe08) ( AKA Fabien Rivet ) : **Model** -  [View commits](https://github.com/TheoGicquel/Djangolic/commits?author=Volpe08)
 
 ## Features
 
@@ -73,11 +83,3 @@ If you wish to run tests in the interactive GUI provided by cypress, launch the 
 ```bash
     ./cypress.sh
 ```
-
-
-## Authors
-
-- [@TheoGicquel](https://www.github.com/TheoGicquel) : **Frontend, Backend, Tests** - [View commits](https://github.com/TheoGicquel/Djangolic/commits?author=TheoGicquel)
-- [@Hazarel](https://www.github.com/Hazarel) ( AKA Maxime Joubert ) : **Tests** - [View commits](https://github.com/TheoGicquel/Djangolic/commits?author=Hazarel)
-- [@Volpe08](https://github.com/Volpe08) ( AKA Fabien Rivet ) : **Model** -  [View commits](https://github.com/TheoGicquel/Djangolic/commits?author=Volpe08)
-
