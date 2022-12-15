@@ -33,7 +33,6 @@ def index(request):
         "beercount":Beer.objects.count(),
         "stylecount":Style.objects.count(),
         "brewerycount": Brewery.objects.count(),
-        
     }
     return render(request, "index.html",context)
 
