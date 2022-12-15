@@ -6,7 +6,7 @@
 class="inline-block p-3 text-gray-700 hover:bg-blue-50 focus:relative"
 title="Edit Beer"
 >
-<a href="/beer/{{beer.id}}/edit">
+<a data-cy="edit-button" href="/beer/{{beer.id}}/edit">
   <i class="fa-solid fa-pen"></i>
 </a>
 </button>
@@ -14,7 +14,7 @@ title="Edit Beer"
   <button
     class="inline-block p-3 text-gray-700 hover:bg-gray-50 focus:relative"
     title="View Beer"
-  ><a href="/beer/{{beer.id}}/view">
+  ><a data-cy="view-button" href="/beer/{{beer.id}}/view">
   <i class="fa-solid fa-eye"></i>
   </a>
   </button>
