@@ -27,6 +27,21 @@
       }
     },
 
+    "reset-serve-d": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/djangolic",
+        "commands": [
+            "python3 manage.py flush --no-input",
+            "python3 manage.py makemigrations",
+            "python3 manage.py migrate --run-syncdb",
+            "python3 manage.py loaddata latest.yaml",
+            "npx nx djangolic:serve-d"
+        ],
+        "parallel": false
+      }
+    },
+
     "setup-env": {
       "executor": "nx:run-commands",
       "options": {

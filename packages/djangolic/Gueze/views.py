@@ -7,6 +7,25 @@ from django.db.models import Q, Count
 import os
 from icecream import ic
 
+
+s_app_name = "Gueze"
+s_search_name = "Search Results"
+s_create_name = "Create Beer"
+s_about_name = "About"
+
+s_res_name = "Results"
+s_sep = " | "
+s_search_title = s_app_name + s_sep + s_search_name
+s_result_title = s_app_name + s_sep + s_res_name
+s_create_title = s_app_name + s_sep + s_create_name
+s_about_tile = s_app_name + s_sep + s_about_name
+
+def get_editViewTitle(beer):
+    return s_app_name + s_sep + "Editing " + beer.name
+
+def get_beerviewTitle(beer):
+    return s_app_name + s_sep + "View " + beer.name
+
 # Create your views here.
 def index(request):
     context ={
@@ -14,7 +33,6 @@ def index(request):
         "beercount":Beer.objects.count(),
         "stylecount":Style.objects.count(),
         "brewerycount": Brewery.objects.count(),
-        
     }
     return render(request, "index.html",context)
 
@@ -58,6 +76,7 @@ def search_results_all(request):
     
     context = {
     "beers":beers,
+    "title": s_result_title,
     }
         
     return render(request, "beer/search-results.html",context)
@@ -69,6 +88,7 @@ def search_results(request):
     if(request.method == "GET"):
         qs = filter(request)
         context = {
+            "title": s_result_title,
             'beers': qs
         }
         return render(request, "beer/search-results.html",context)
@@ -83,7 +103,8 @@ def search_results(request):
 
 def search_form_beer(request):
     context = {
-        "BeerSearchForm": BeerSearchForm
+        "BeerSearchForm": BeerSearchForm,
+        "title": s_search_title,
     }
 
     return render(request, "forms/search.html",context)
@@ -95,6 +116,7 @@ def edit_beer_form(request,beer_id):
     context = {
         "BeerUpdateForm": BeerUpdateForm(instance=beer),
         "beer":beer,
+        "title": get_editViewTitle(beer),
         
     }
     
@@ -119,7 +141,8 @@ def edit_beer_result(request,beer_id):
 def create_beer_form(request):
     
     context = {
-        "BeerCreateForm": BeerCreateForm
+        "BeerCreateForm": BeerCreateForm,
+        "title": s_create_title
     }
     
     return render(request, "forms/create.html",context)
@@ -158,19 +181,33 @@ def random_beer(request):
     # if no beers in database, return to index
     if not beers:
         return redirect("/")
-    
     beer = random.choice(beers)
-    return render(request, "beer/beer-view.html",context={"beer":beer})  
+    context = {
+        "title": get_beerviewTitle(beer),
+        "beer":beer
+    }
+    return render(request, "beer/beer-view.html",context)  
 
 
 def about(request):
-    return render(request, "about/about.html")   
+    context = {
+        "title": s_about_tile
+    }
+    return render(request, "about/about.html",context)   
 
 def beerview(request,id):
     beer =  Beer.objects.get(id=id)    
-    return render(request, "beer/beer-view.html",context={"beer":beer})   
+    context = {
+        "title": get_beerviewTitle(beer),
+        "beer":beer
+    }
+    return render(request, "beer/beer-view.html",context)   
 
 
 def beerview_all(request):    
     beers = Beer.objects.all()
-    return render(request, "beer/search-results.html",context={"beers":beers})   
+    context = {
+        "title":"Gueze|index",
+        "beer":beers
+    }
+    return render(request, "beer/search-results.html",context)   

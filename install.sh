@@ -23,6 +23,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     source venv/bin/activate
 elif [[ "$OSTYPE" == "msys" ]]; then
     source venv/Scripts/activate
+elif [[ "$OSTYPE" == "darwin" ]]; then
+    source venv/Scripts/activate
 fi
 
 echo "[OK] venv setup complete"
